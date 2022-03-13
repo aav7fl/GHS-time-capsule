@@ -1,0 +1,91 @@
+* { padding: 0; margin: 0; }
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 13px;
+ background-color: #AEDFFF;
+}
+#wrapper { 
+ margin: 0 auto;
+ width: 972px;
+}
+#header {
+ color: #333;
+ width: 950px;
+ float: left;
+ padding: 10px;
+ border: 1px solid #ccc;
+ height: auto;
+ margin: 10px 0px 0px 0px;
+ background: #83C2FF;
+}
+#navigation {
+float: left;
+ width: 950px;
+ color: #333;
+ padding: 10px;
+ border: 1px solid #ccc;
+ margin: 0px 0px 0px 0px;
+ background: #62B1FF;
+}
+#leftcolumn { 
+ color: #333;
+ border: 1px solid #ccc;
+ background: #ddd;
+ margin: 0px 0px 0px 0px;
+ padding: 10px;
+ height: 520px;
+ width: 200px;
+ float: left;
+}
+#content { 
+ float: left;
+ color: #333;
+ border: 1px solid #ccc;
+ background: #0D9EFF;
+ margin: 0px 0px 0px 0px;
+ padding: 10px;
+ height: 520px;
+ width:  728px;
+ display: inline;
+} 
+
+.clear { clear: both; }
+
+.gradientbuttons ul{
+padding: 3px 0;
+margin-left: 0;
+margin-top: 1px;
+margin-bottom: 0;
+font: bold 13px Verdana;
+list-style-type: none;
+text-align: center; /*set to left, center, or right to align the menu as desired*/
+}
+
+.gradientbuttons li{
+display: inline;
+margin: 0;
+}
+
+.gradientbuttons li a{
+text-decoration: none;
+padding: 5px 7px;
+margin-right: 5px;
+border: 1px solid #778;
+color: white;
+border:1px solid gray;
+background: #ddd;
+border-radius: 8px; /*w3c border radius*/
+box-shadow: 3px 3px 4px rgba(0,0,0,.5); /* w3c box shadow */
+-moz-border-radius: 8px; /* mozilla border radius */
+-moz-box-shadow: 3px 3px 4px rgba(0,0,0,.5); /* mozilla box shadow */
+background: -moz-linear-gradient(center top, #aaa, #bbb 25%, #ccc 45%, #ddd 85%, #eee); /* mozilla gradient background */
+-webkit-border-radius: 8px; /* webkit border radius */
+-webkit-box-shadow: 3px 3px 4px rgba(0,0,0,.5); /* webkit box shadow */
+background: -webkit-gradient(linear, center top, center bottom, from(#fff), color-stop(25%, #2996FF), color-stop(45%, #0099FF), color-stop(85%, #00F), to(#000)); /* webkit gradient background */
+}
+
+.gradientbuttons li a:hover{
+color: grey;
+}
+

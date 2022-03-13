@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Untitled</title>
+</head>
+<body bg background="picks.jpg">
+<center><img src="schedule.png"><center>
+
+
+<center>
+<table border="2" cellpadding="0" cellspacing="0" summary="">
+<tr bgcolor="maroon">
+<td><h3><center>Class Hour</center></h3></td>
+<td><h3><center>Class</center></h3></td>
+<td><h3><center>Teacher</center></h3></td>
+<td><h3><center>Class Description</center></h3></td>
+</tr>
+<tr bgcolor="silver">
+<td><h4><center>1st Hour</center></h4></td>
+<td><h4><center>Advanced 3D CAD</center></h4></td>
+<td><h4><center>Mr. Denning</center></h4></td>
+<td><center><h4>In Adv. 3D CAD, we make assembly drawings of machinery and tools using a computer program to help generate the images we draw.</h4></center></td>
+</tr>
+<tr bgcolor="silver">
+<td><h4><center>2nd Hour</center></h4></td>
+<td><h4><center>Honors Physics</center></h4></td>
+<td><h4><center>Mr. Evele</center></h4></td>
+<td><h4><center>In Hon. Physics we learn about physics at a faster pace than the rest of the classes and we learn about things such as: Momentum, Gravity, Forces, etc.</center></h4></td>
+</tr>
+<tr bgcolor="silver">
+<td><h4><center>3rd Hour</center></h4></td>
+<td><h4><center>College Lit.</center></h4></td>
+<td><h4><center>Ms. Gergen</center></h4></td>
+<td><h4><center>In College Lit. we read books that are on the college level and after we have read through the book we analyze many aspects of the book such as theme or hidden meanings.</center></h4></td>
+</tr>
+<tr bgcolor="silver">
+<td><h4><center>4th Hour (B Lunch)</center></h4></td>
+<td><h4><center>Pre-Calc</center></h4></td>
+<td><h4><center>Mrs. Hildenbrand</center></h4></td>
+<td><h4><center>In Pre-Calc we are taught about many trigonometry aspects and about Sine and Cosine waves.</center></h4></td>
+</tr>
+<tr bgcolor="silver">
+<td><h4><center>5th Hour</center></h4></td>
+<td><h4><center>Intro to Web Design</center></h4></td>
+<td><h4><center>Mr. Dolloff</center></h4></td>
+<td><h4><center>In Intro to Web Design we learn the language of HTML and learn how to build websites of our very own using HTML Kit or Angelfire.</center></h4></td>
+</tr>
+<tr bgcolor="silver">
+<td><h4><center>6th Hour</center></h4></td>
+<td><h4><center>Wood Tech</center></h4></td>
+<td><h4><center>Mr. Herbert</center></h4></td>
+<td><h4><center>In Wood Tech we build furniture out of wood and in the process of doing this we learn about the different species of wood and the different tools in wood working.</center></h4></td>
+</tr>
+</table>
+<br>
+<table border="2" cellpadding="0" cellspacing="0" summary="0">
+<tr bgcolor="maroon">
+<td><center><h3>After School Activities</h3></center></td>
+<td><center><h3>What Goes On</h3></center></td>
+</tr>
+<tr bgcolor="silver">
+<td><h4><center>If Work</center></h4></td>
+<td><h4><center>Get home at 3:00 and do homework till 4:00 and then make dinner then leave for work at 4:39. Get home at 9:30 then do homework and go to bed around 10:30.</center></h4></td>
+</tr>
+<tr bgcolor="silver">
+<td><h4><center>No Work</center></h4></td>
+<td><h4><center>Get home at 3:00 and do homework and listen to some music. Have dinner around 4:00 and from then on play/practice guitar till 10:00 and then go to bed.</center></h4></td>
+</tr>
+</table>
+</center>
+</table>
+<form>
+<center>
+<script language="JavaScript">
+<!--
+
+var current = 0;
+
+function imageArray()
+{
+  this.length = imageArray.arguments.length;
+  for (var i = 0; i < this.length; i++)
+  {
+     this[i] = imageArray.arguments[i];
+  }
+}
+// All images MUST BE OF THE SAME SIZE, since
+// the dimensions of the first image will be
+// used for all subsequent images.
+// All the images for your slide show need to 
+// be stored in the same directory.
+// You can use any group and any 
+// number of images. Place your images within 
+// each set of quotation marks below.
+// If the images are all in your Angelfire 
+// images subdirectory, makes sure the name 
+// of each image starts with "images/" like
+// in the example below.
+var imgz = new imageArray("/life/spring08015.jpg","/life/fall08009.jpg","/life/fall08010.jpg","/life/fall08011.jpg","/life/fall08012.jpg","/life/fall08013.jpg","/life/spring08019.jpg");
+
+document.write('<img name="myImages" border="1" src="'+imgz[0]+'">');
+
+function getPosition(val)
+{
+  var goodnum = current+val;
+  if (goodnum < 0)
+// This message is displayed if your visitor 
+// tries to click back past your first image.
+// Place your message within the quotation 
+// marks below.
+    alert("You're back!");
+
+  else
+    if (goodnum > imgz.length-1)
+// This message is displayed if your visitor 
+// tries to click past your last image. Place 
+// your message within the quotation marks 
+// below.
+      alert("That's all, folks!");
+    else
+      document.myImages.src = imgz[goodnum];
+
+  current = goodnum;
+}
+
+//-->
+</script>
+<br>
+  <input type="button" value="<<" onclick="getPosition(-1)">  
+  <input type="button" value=">>" onclick="getPosition(1)">
+</center>
+</form>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+/*
+      Created by Keith Donegan of Code-Sucks.com
+	  
+	  E-Mail: Keithdonegan@gmail.com
+	  
+	  You can do whatever you want with these layouts,
+	  but it would be greatly appreciated if you gave a link
+	  back to http://www.code-sucks.com
+	  
+*/
+
+* { padding: 0; margin: 0; }
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 13px;
+}
+#wrapper { 
+ margin: 0 auto;
+ width: 922px;
+}
+#header {
+ color: #333;
+ width: 900px;
+ float: left;
+ padding: 10px;
+ border: 1px solid #ccc;
+ height: 100px;
+ margin: 10px 0px 5px 0px;
+ background: darkred;
+}
+#navigation {
+ float: left;
+ width: 900px;
+ color: #333;
+ padding: 10px;
+ border: 1px solid #ccc;
+ margin: 0px 0px 5px 0px;
+ background: darkred;
+}
+#leftcolumn{ 
+ float: left;
+ color: #770000;
+ border: 1px solid #ccc;
+ background: #e15526;
+ margin: 0px 5px 5px 0px;
+ padding: 20px;
+ height: 330px;
+ width: 436px;
+ display: inline;
+}
+#centercolumn{ 
+ color: #770000;
+ border: 1px solid #ccc;
+ background: #e17556;
+ margin: 0px 5px 5px 0px;
+ padding: 10px;
+ height: 350px;
+ width: 195px;
+ float: left;
+}
+#rightcolumn { 
+ color: #770000;
+ border: 1px solid #ccc;
+ background: #e19576;
+ margin: 0px 0px 5px 0px;
+ padding: 10px;
+ height: 350px;
+ width: 195px;
+ float: left;
+}
+#footer { 
+ width: 900px;
+ clear: both;
+ color: orange;
+ border: 1px solid #ccc;
+ background: darkred;
+ margin: 0px 0px 10px 0px;
+ padding: 10px;
+}
+
+
+div.topbar{ /* bar that runs across the top of the menu */
+height: 16px;
+background: #e16031;
+}
+
+ul.claybricks{ /* main menu UL */
+font-weight: bold;
+width: 100%;
+background: #e3e490;
+padding: 6px 0 6px 0; /* padding of the 4 sides of the menu */
+margin: 0;
+text-align: left; /* set value to "left", "center", or "right" to align menu accordingly */
+}
+
+ul.claybricks li{
+display: inline;
+}
+
+ul.claybricks li a{
+color:black;
+padding: 6px 8px 4px 8px; /* padding of the 4 sides of each menu link */
+margin-right: 20px; /* spacing between each menu link */
+text-decoration: none;
+}
+
+ul.claybricks li a:hover, ul.claybricks li a.selected{
+color: white;
+background: #5d4137;
+background: -moz-linear-gradient(top, #5d4137 0%, #41251b 12%, #2c0f05 100%); /* moz syntax for CSS3 gradient */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5d4137), color-stop(12%,#41251b), color-stop(100%,#2c0f05));
+background: -webkit-linear-gradient(top, #5d4137 0%,#41251b 12%,#2c0f05 100%); /* webkit syntax for CSS3 gradient */
+background: -o-linear-gradient(top, #5d4137 0%,#41251b 12%,#2c0f05 100%); /* opera syntax for CSS3 gradient */
+background: -ms-linear-gradient(top, #5d4137 0%,#41251b 12%,#2c0f05 100%);
+background: linear-gradient(top, #5d4137 0%,#41251b 12%,#2c0f05 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5d4137', endColorstr='#2c0f05',GradientType=0 );
+-moz-box-shadow: 0 0 5px #595959; /* moz syntax for CSS3 box shadows */
+-webkit-box-shadow: 0 0 5px #595959;
+box-shadow: 0 0 5px #595959;
+padding-top: 17px; /* large padding to get menu item to protrude upwards */
+padding-bottom: 6px;
+}
+
+body {background-image:url('tcbg.jpg');} 
+
+ a:link {color:orange;}      /* unvisited link */
+a:visited {color:darkorange;}  /* visited link */
+a:hover {color:lightorange;}  /* mouse over link */
+a:active {color:yellow;}  /* selected link */ 
+
+h2 { color:darkred;
+text-align: center }

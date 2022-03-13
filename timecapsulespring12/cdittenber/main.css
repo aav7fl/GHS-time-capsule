@@ -1,0 +1,139 @@
+/*
+      Created by Keith Donegan of Code-Sucks.com
+	  
+	  E-Mail: Keithdonegan@gmail.com
+	  
+	  You can do whatever you want with these layouts,
+	  but it would be greatly appreciated if you gave a link
+	  back to http://www.code-sucks.com
+	  
+*/
+
+* { padding: 0; margin: 0; }
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 13px;
+ background: #7A13B6;
+}
+
+#wrapper { 
+ margin: 0 auto;
+ width: 922px;
+}
+
+#header {
+ color: #333;
+ width: 900px;
+ float: left;
+ padding: 10px;
+ border: 1px solid #ccc;
+ height: 100px;
+ margin: 10px 0px 5px 0px;
+ background: #FCFC0D;
+}
+
+#leftcolumn { 
+ color: #333;
+ border: 1px solid #ccc;
+ background: #FCFC0D;
+ margin: 0px 5px 5px 0px;
+ padding: 10px;
+ height: 350px;
+ width: 195px;
+ float: left;
+}
+
+#rightcolumn { 
+ float: right;
+ color: #333;
+ border: 1px solid #ccc;
+ background: #FCFC0D;
+ margin: 0px 0px 5px 0px;
+ padding: 10px;
+ height: 350px;
+ width: 678px;
+ display: inline;
+ position: relative;
+}
+
+
+
+
+#coolmenu{
+border: 1px solid black;
+width: 170px;
+background-color: #7A13B6;
+}
+
+#coolmenu a{
+font: bold 13px Verdana;
+padding: 2px;
+padding-left: 4px;
+display: block;
+width: 100%;
+color: white;
+text-decoration: none;
+border-bottom: 1px solid black;
+}
+
+html>body #coolmenu a{
+width: auto;
+}
+
+#coolmenu a:hover{
+background-color: black;
+color: white;
+}
+
+#tabledescription{
+width: 100%;
+height: 3em;
+padding: 2px;
+filter:alpha(opacity=0);
+-moz-opacity:0;
+}
+
+</style>
+
+<script type="text/javascript">
+
+
+var baseopacity=0
+
+function showtext(thetext){
+if (!document.getElementById)
+return
+textcontainerobj=document.getElementById("tabledescription")
+browserdetect=textcontainerobj.filters? "ie" : typeof textcontainerobj.style.MozOpacity=="string"? "mozilla" : ""
+instantset(baseopacity)
+document.getElementById("tabledescription").innerHTML=thetext
+highlighting=setInterval("gradualfade(textcontainerobj)",50)
+}
+
+function hidetext(){
+cleartimer()
+instantset(baseopacity)
+}
+
+function instantset(degree){
+if (browserdetect=="mozilla")
+textcontainerobj.style.MozOpacity=degree/100
+else if (browserdetect=="ie")
+textcontainerobj.filters.alpha.opacity=degree
+else if (document.getElementById && baseopacity==0)
+document.getElementById("tabledescription").innerHTML=""
+}
+
+function cleartimer(){
+if (window.highlighting) clearInterval(highlighting)
+}
+
+function gradualfade(cur2){
+if (browserdetect=="mozilla" && cur2.style.MozOpacity<1)
+cur2.style.MozOpacity=Math.min(parseFloat(cur2.style.MozOpacity)+0.2, 0.99)
+else if (browserdetect=="ie" && cur2.filters.alpha.opacity<100)
+cur2.filters.alpha.opacity+=20
+else if (window.highlighting)
+clearInterval(highlighting)
+}

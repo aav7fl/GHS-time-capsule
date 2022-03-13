@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Untitled</title>
+
+
+
+
+<script type="text/javascript">
+
+/***********************************************
+* DHTML slideshow script-  © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice must stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var photos=new Array()
+var photoslink=new Array()
+var which=0
+
+//define images. You can have as many as you want:
+photos[0]="dance.jpg"
+photos[1]="JS.jpg"
+photos[2]="iphone5.jpg"
+photos[3]="kardashian.jpg"
+photos[4]="pinkfriday.jpg"
+
+//Specify whether images should be linked or not (1=linked)
+var linkornot=0
+
+//Set corresponding URLs for above images. Define ONLY if variable linkornot equals "1"
+photoslink[0]=""
+photoslink[1]=""
+photoslink[2]=""
+
+//do NOT edit pass this line
+
+var preloadedimages=new Array()
+for (i=0;i<photos.length;i++){
+preloadedimages[i]=new Image()
+preloadedimages[i].src=photos[i]
+}
+
+
+function applyeffect(){
+if (document.all && photoslider.filters){
+photoslider.filters.revealTrans.Transition=Math.floor(Math.random()*23)
+photoslider.filters.revealTrans.stop()
+photoslider.filters.revealTrans.apply()
+}
+}
+
+
+
+function playeffect(){
+if (document.all && photoslider.filters)
+photoslider.filters.revealTrans.play()
+}
+
+function keeptrack(){
+window.status="Image "+(which+1)+" of "+photos.length
+}
+
+
+function backward(){
+if (which>0){
+which--
+applyeffect()
+document.images.photoslider.src=photos[which]
+playeffect()
+keeptrack()
+}
+}
+
+function forward(){
+if (which<photos.length-1){
+which++
+applyeffect()
+document.images.photoslider.src=photos[which]
+playeffect()
+keeptrack()
+}
+}
+
+function transport(){
+window.location=photoslink[which]
+}
+
+</script>
+
+
+</head>
+<body>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Fixed Width CSS Layouts - 2 Column - fw-12-2-col</title>
+<link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+
+         <div id="header">
+		<center><img src="popbanner.png" alt=""></center>
+		
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Left Column -->
+		 <div id="leftcolumn">
+		<font color="#0000ff"> <h2>Pop Culture</h2>
+ <p>
+<i>noun</i>; <p>
+<h5>Pop culture is the knowledge of current, or up-to-date events. It can refer to music, television, film, sports, and anything else in the public domain.</h5>
+</font>
+<p>
+<center>
+<a href="http://ghsdawgs.com/vault/timecapsulespring12/kwestcott/timecapsule.html"><img src="homebutton.png" alt=""></a></center>
+
+
+		 </div>
+		
+		 <!-- End Left Column -->
+		 
+		 <!-- Begin Right Column -->
+<div>
+ 
+	<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%" colspan="2" height="22"><center>
+<script>
+if (linkornot==1)
+document.write('<a href="javascript:transport()">')
+document.write('<img src="'+photos[0]+'" name="photoslider" style="filter:revealTrans(duration=2,transition=23)" border=0>')
+if (linkornot==1)
+document.write('</a>')
+</script>
+</center></td>
+  </tr>
+  <tr>
+    <td width="50%" height="21"><p align="left"><a href="#" onClick="backward();return false">Previous Slide</a></td>
+    <td width="50%" height="21"><p align="right"><a href="#" onClick="forward();return false">Next Slide</a></td>
+  </tr>
+</table>
+
+<p align="center"><font face="Arial" size="-2">Free DHTML scripts provided by<br>
+<a href="http://dynamicdrive.com">Dynamic Drive</a></font></p>
+						
+		
+			  
+		 </div>
+		 <!-- End Right Column -->
+		 
+		 <!-- Begin Footer -->
+		 <div id="footer">
+
+	     </div>
+		 <!-- End Footer -->
+
+		 
+   </div>
+   <!-- End Wrapper -->
+   
+</body>
+</html>
+
+</body>
+</html>

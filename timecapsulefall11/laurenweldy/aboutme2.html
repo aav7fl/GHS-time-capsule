@@ -1,0 +1,485 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center>
+<style type="text/css">
+
+#container
+{
+width: 90%;
+margin: 10px auto;
+
+background-color: #fff;
+color: #333;
+border: 1px solid gray;
+
+line-height: 130%;
+
+}
+
+#top
+{
+padding: .5em;
+background-color: #ddd;
+border-bottom: 1px solid gray;
+}
+
+#top h1
+{
+padding: 0;
+margin: 0;
+}
+
+#leftnav
+{
+float: left;
+width: 160px;
+
+margin: 0;
+padding: 1em;
+
+}
+
+
+#content
+{
+margin-left: 200px;
+border-left: 1px solid gray;
+
+padding: 1em;
+
+}
+
+#footer
+{
+clear: both;
+margin: 0;
+padding: .5em;
+
+color: #333;
+background-color: #ddd;
+
+border-top: 1px solid gray;
+
+}
+
+#leftnav p { margin: 0 0 1em 0; }
+#content h2 { margin: 0 0 .5em 0;
+
+max-width: 36em;
+
+ }
+
+
+
+<style type="text/css">
+
+.arrowlistmenu{
+width: 180px; /*width of menu*/
+}
+
+.arrowlistmenu .headerbar{
+font: bold 14px Arial;
+color: white;
+background: black url(media/titlebar.png) repeat-x center left;
+margin-bottom: 10px; /*bottom spacing between header and rest of content*/
+text-transform: uppercase;
+padding: 4px 0 4px 10px; /*header text is indented 10px*/
+}
+
+.arrowlistmenu ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+margin-bottom: 8px; /*bottom spacing between each UL and rest of content*/
+}
+
+.arrowlistmenu ul li{
+padding-bottom: 2px; /*bottom spacing between menu items*/
+}
+
+.arrowlistmenu ul li a{
+color: #A70303;
+background: url(media/arrowbullet.png) no-repeat center left; /*custom bullet list image*/
+display: block;
+padding: 2px 0;
+padding-left: 19px; /*link text is indented 19px*/
+text-decoration: none;
+font-weight: bold;
+border-bottom: 1px solid #dadada;
+font-size: 90%;
+}
+
+.arrowlistmenu ul li a:visited{
+color: #A70303;
+}
+
+.arrowlistmenu ul li a:hover{ /*hover state CSS*/
+color: #A70303;
+background-color: #F3F3F3;
+}
+
+
+
+
+
+h1 {
+		color: #ff3333;
+	}
+	
+body {
+		background-color: #000000;
+	}
+
+	h1 {
+		color: #990000;
+		background-color: #000000;
+
+	}
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+</style>
+
+<title>Untitled</title>
+</head>
+<body>
+
+
+
+
+<script>
+
+/******************************************
+* Cross browser cursor trailer script- By Brian Caputo (bcaputo@icdc.com)
+* Visit Dynamic Drive (http://www.dynamicdrive.com/) for full source code
+* Modified Dec 31st, 02' by DD. This notice must stay intact for use
+******************************************/
+
+A=document.getElementById
+B=document.all;
+C=document.layers;
+T1=new Array("trail1.gif",38,35,"trail2.gif",30,31,"trail3.gif",28,26,"trail4.gif",22,21,"trail5.gif",16,16,"trail6.gif",10,10)
+
+var offsetx=15 //x offset of trail from mouse pointer
+var offsety=10 //y offset of trail from mouse pointer
+
+nos=parseInt(T1.length/3)
+rate=50
+ie5fix1=0;
+ie5fix2=0;
+rightedge=B? document.body.clientWidth-T1[1] : window.innerWidth-T1[1]-20
+bottomedge=B? document.body.scrollTop+document.body.clientHeight-T1[2] : window.pageYOffset+window.innerHeight-T1[2]
+
+for (i=0;i<nos;i++){
+createContainer("CUR"+i,i*10,i*10,i*3+1,i*3+2,"","<img src='"+T1[i*3]+"' width="+T1[(i*3+1)]+" height="+T1[(i*3+2)]+" border=0>")
+}
+
+function createContainer(N,Xp,Yp,W,H,At,HT,Op,St){
+with (document){
+write((!A && !B) ? "<layer id='"+N+"' left="+Xp+" top="+Yp+" width="+W+" height="+H : "<div id='"+N+"'"+" style='position:absolute;left:"+Xp+"; top:"+Yp+"; width:"+W+"; height:"+H+"; ");
+if(St){
+if (C)
+write(" style='");
+write(St+";' ")
+}
+else write((A || B)?"'":"");
+write((At)? At+">" : ">");
+write((HT) ? HT : "");
+if (!Op)
+closeContainer(N)
+}
+}
+
+function closeContainer(){
+document.write((A || B)?"</div>":"</layer>")
+}
+
+function getXpos(N){
+if (A)
+return parseInt(document.getElementById(N).style.left)
+else if (B)
+return parseInt(B[N].style.left)
+else
+return C[N].left
+}
+
+function getYpos(N){
+if (A)
+return parseInt(document.getElementById(N).style.top)
+else if (B)
+return parseInt(B[N].style.top)
+else
+return C[N].top
+}
+
+function moveContainer(N,DX,DY){
+c=(A)? document.getElementById(N).style : (B)? B[N].style : (C)? C[N] : "";
+if (!B){
+rightedge=window.innerWidth-T1[1]-20
+bottomedge=window.pageYOffset+window.innerHeight-T1[2]
+}
+c.left=Math.min(rightedge, DX+offsetx);
+c.top=Math.min(bottomedge, DY+offsety);
+}
+function cycle(){
+//if (IE5) 
+if (document.all&&window.print){
+ie5fix1=document.body.scrollLeft;
+ie5fix2=document.body.scrollTop;
+}
+for (i=0;i<(nos-1);i++){
+moveContainer("CUR"+i,getXpos("CUR"+(i+1)),getYpos("CUR"+(i+1)))
+}
+}
+
+function newPos(e){
+moveContainer("CUR"+(nos-1),(B)?event.clientX+ie5fix1:e.pageX+2,(B)?event.clientY+ie5fix2:e.pageY+2)
+}
+
+function getedgesIE(){
+rightedge=document.body.clientWidth-T1[1]
+bottomedge=document.body.scrollHeight-T1[2]
+}
+
+if (B){
+window.onload=getedgesIE
+window.onresize=getedgesIE
+}
+
+if(document.layers)
+document.captureEvents(Event.MOUSEMOVE)
+document.onmousemove=newPos
+setInterval("cycle()",rate)
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="container">
+<div id="top">
+<center><h1><img src="banner.png"></h1>
+</div>
+<div id="leftnav">
+<div class="arrowlistmenu">
+
+<h3 class="headerbar">My Pages</h3>
+<ul>
+<li><a href="http://www.ghsdawgs.com/students/laurenweldy/goldenmonkey.html">Golden Monkey</a>
+<li><a href="http://www.ghsdawgs.com/students/laurenweldy/slideshow.html">Killer Slideshow</a>
+<li><a href="http://laurenweldy.edu.glogster.com/laurens-glog/">Autumn Glog</a></li>
+<li><a href="http://www.ghsdawgs.com/students/laurenweldy/justin.html">Justin Brooks</a></li>
+<li><a href="H:\web design\aboutme.html">About Me</a></li>
+<li><a href="http://www.ghsdawgs.com/students/laurenweldy/pics.html">Pictures</a></li>
+</ul>
+
+<h3 class="headerbar">Shop Online</h3>
+<ul>
+<li><a href="http://www.buckle.com">Buckle</a></li>
+<li><a href="http://www.americaneagle.com">American Eagle</a></li>
+<li><a href="http://www.aeropostale.com">Aeropostale</a></li>
+<li><a href="http://www.hollisterco.com">Hollister</a></li>
+<li><a href="http://www.charlotterusse.com/home/index.jsp">Charlotte Russe</a></li>
+<li><a href="http://www.francescascollections.com/category/women+apparel/dresses.do?sortby=ourPicks&page=all">Francescas</a></li>
+<li><a href="http://shop.pacsun.com/home.jsp?XCID=P:1208050544&gclid=CNLSotCxu6sCFcECQAodJFofrg">Pacsun</a></li>
+<li><a href="http://www.champssports.com/">Champs</a></li>
+<li><a href="http://www.finishline.com/"> Finish Line </a></li>
+<li><a href="http://www.abercrombie.com/webapp/wcs/stores/servlet/StoreView?storeId=10051&langId=-1&catalogId=10901">Abercrombie & Fitch</a></li>
+</ul>
+
+<h3 class="headerbar">Other</h3>
+<ul>
+<li><a href="http://www.bubbleshooterfans.com">Bubble Shooter</a></li>
+<li><a href="http://www.berecruited.com">BeRecruited</a></li>
+<li><a href="http://www.ghsdawgs.com">GHS Dawgs</a></li>
+<li><a href="http://www.usatoday.com">USA Today</a></li>
+<li><a href="http://www.google.com">Google</a></li>
+<li><a href="http://www.facebook.com">Facebook</a></li>
+<li><a href="http://www.myspace.com">Myspace</a></li>
+<li><a href="http://www.cooltext.com">Cool Text</a></li>
+<li><a href="http://www.twitter.com">Twitter</a></li>
+</ul>
+<br>
+<big><b>Favorite Quote:</b></big>
+</br>
+<p>
+<b><font face="bradley hand ITC"><i><big><h4>"Failure is only a temporary change in direction to set you straight for your next success. 
+Only those who dare to fail greatly can ever achieve greatly."</h4></big></i></font></b>
+</p>
+</br>
+</div>
+
+
+
+</div>
+<div id="content">
+<br>
+<font color="#996600"><h4>People say winning isn't everything and that it's not about the gold and what you take home in the end. 
+But truth is, when all is said and done, the only thing you have left are the memories and the award. </h4></font>
+</br>
+<big><b><i><font color="#cc3333"><h3>"When you're playing, awards don't seem like much. Then you get older and all of it becomes more precious. It is nice to be remembered." -Henry Benjamin "Hank" Greenberg (Detroit Tigers) 
+</font>
+</h3></i></b></big>
+<p>
+<div>
+<font color="#660033"><font face="century gothic"><b>My name is Lauren and I am a junior at Grandville High School. I'm 16 and I drive a red, 2004 Jeep Liberty. I'm the youngest of two children and have one older brother named Brett who is 20, attends GRCC, and does landscaping. I have a cat named Murphy who is on his last two legs. My favorite animals are puppies and cheetahs. If i could go anywhere in the world i would go to other countries across the world and help people in need. I'd also go to Hawaii for one year and learn how to surf. I am a very athletic girl and i've played almost every sport possible to play throughout my life time but i only play softball now. I'm a pitcher and 3rd baseman for three teams. I enjoy softball because i can spend time with my closest friends, meet new people, travel, get down n dirty, make bruises and bleed, and i can be a winner in many ways. I am in High School now but am working for a full-ride scholarship to a University to continue my softball career. In the summer, I enjoy going to my cottage and fourwheeling, fishing, relaxing away from reality here in Grand Rapids, going to the beach, taking long walks at night and running in the morning, hiking, & traveling for my softball tournaments. In the fall & winter, i enjoy football games and snowmobiling. Someone i look up to and am impressed most by is Jennie Finch, she's definitely my idol. A baseball player i enjoy watching most is Justin Verlander and I really enjoy watching Michigan football; especially Denard Robinson. I love shopping and going out with my lady friends. Relaxing at home with a warm blanket and fire place watching a movie is nice too.</b> </font></font>
+
+</div>
+<center>
+<br>
+<div>
+<table border="2" width="65%"cellpadding="5" cellspacing="3" align="center">
+<tr>
+<td bgcolor="black"><img src="back.jpg"></td>
+<td bgcolor="black"><img src="cheetah.jpg"></td>
+<td bgcolor="black"><img src="4.jpg"></td>
+<td bgcolor="black"><img src="beth.jpg"></td>
+</tr>
+</table>
+<center>
+
+
+
+
+
+
+
+
+<br>
+<div align="center" style="background-color: ">
+<font face="Georgia"><font color="#3366ff"><h2>Some of my favorite things are:</h2></font></font>
+<table border="0">
+<tr>
+<td>
+<font color="#6666ff"><h3>Artists/Colors:</h3></font>
+<ul>
+<h4>
+<font color="#66ccff"><li>Light Blue</li>
+<li>Chris Brown</li>
+<li>Darius Rucker</li>
+<li>Shania Twain</li>
+<li>Trey Songz</li>
+<li>Jason Aldean</li>
+<li>Usher</li>
+<li>Lil Wayne</li>
+<li>Black</li>
+<li>Gucci</li></font>
+</h4>
+</ul>
+</td>
+<td>
+<font color="#6600cc"><h3>I Enjoy:</h3></font>
+<ul>
+<h4>
+<font color="#ff0066"><li>Windy Ridge</li>
+<li>Family</li>
+<li>College Football</li>
+<li>Just Go With It</li>
+<li>College Softball</li>
+<li>Softball</li>
+<li>Working Out</li>
+<li>Fourwheeling</li>
+<li>Fishing</li>
+<li>Snowmobiling</li></font>
+</h4>
+</ul>
+</td>
+<td>
+<font color="#cc00ff"><h3>Others:</h3></font>
+<ul>
+<h4>
+<font color="#3399cc"><li>Buckle</li>
+<li>Pitching</li>
+<li>Jet Skiing</li>
+<li>3rd Base</li>
+<li>Starbucks</li>
+<li>Beach</li>
+<li>Tubing</li>
+<li>Movies</li>
+<li>Friends</li>
+<li>Slushies</li></font>
+</h4>
+</ul>
+</td>
+</tr>
+</table>
+
+
+<br>
+<hr>
+<font color="#ff6633"><h2>Things i enjoy doing are:</h2></font>
+<table border="2" width="65%"cellpadding="5" cellspacing="3" align="center">
+<tr>
+<center>
+<div>
+<td bgcolor="black"><img src="fish.jpg"></td>
+<td bgcolor="black"><img src="fourwheeler.jpg"></td>
+<td bgcolor="black"><img src="lake.jpg"></td>
+<td bgcolor="black"><img src="snowmobile.jpg"></td>
+</tr>
+
+<tr>
+<td bgcolor="black"><img src="mi.jpg"></td>
+<td bgcolor="black"><img src="finch.jpg"></td>
+<td bgcolor="black"><img src="ver.jpg"></td>
+<td bgcolor="black"><img src="movie.jpg"></td>
+</tr>
+</hr>
+</table>
+</center>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Blast from the Past...</title>
+<link rel="stylesheet" type="text/css" href="main3.css" />
+</head>
+
+<body>
+
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+
+         <div id="header">
+
+		       	<img src="pastbanner.bmp" alt="">
+			   
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Navigation -->
+         <div id="navigation">
+				 <img src="links.png" alt="">
+		 <a href="significant.html"><img src="signbutton2.png" alt=""> </a>                                                                            
+		  <a href="timecapsule.html"> <img src="letterbutton.png" alt=""> </a>
+		 </div>
+		 <!-- End Navigation -->
+		 
+		 <!-- Begin Left Column -->
+
+		 <div id="leftcolumn" align="center">
+		<img src="pop.png" alt=""> 
+		<img src="poppic2.JPG" alt="">
+		
+		 </div>
+		 <!-- End Left Column -->
+		 
+		 <!-- Begin Right Column -->
+		 <div id="rightcolumn">
+		<center> <img src="pics.png" alt=""><br>
+		       <script language="JavaScript1.1">
+<!--
+
+//Pixelating Image slideshow
+//Copyright Dynamic Drive 2001
+//Visit http://www.dynamicdrive.com for this script
+
+//specify interval between slide (in mili seconds)
+var slidespeed=2500
+//specify images
+var slideimages=new Array("pic1.jpg","pic2.jpg","pic3.jpg","pic4.jpg","pic5.jpg")
+//specify corresponding links
+var slidelinks=new Array("http://www.dynamicdrive.com","http://wsabstract.com","http://www.geocities.com")
+
+var imageholder=new Array()
+var ie55=window.createPopup
+for (i=0;i<slideimages.length;i++){
+imageholder[i]=new Image()
+imageholder[i].src=slideimages[i]
+}
+
+function gotoshow(){
+window.location=slidelinks[whichlink]
+}
+
+//-->
+</script>
+</head>
+<body>
+<a href="javascript:gotoshow()"><img src="photo1.jpg" name="slide" border=0 style="filter:progid:DXImageTransform.Microsoft.Pixelate(MaxSquare=15,Duration=1)"></a>
+
+<script language="JavaScript1.1">
+<!--
+var whichlink=0
+var whichimage=0
+var pixeldelay=(ie55)? document.images.slide.filters[0].duration*1000 : 0
+function slideit(){
+if (!document.images) return
+if (ie55) document.images.slide.filters[0].apply()
+document.images.slide.src=imageholder[whichimage].src
+if (ie55) document.images.slide.filters[0].play()
+whichlink=whichimage
+whichimage=(whichimage<slideimages.length-1)? whichimage+1 : 0
+setTimeout("slideit()",slidespeed+pixeldelay)
+}
+slideit()
+
+//-->
+</script>
+	      </div>
+		 <!-- End Right Column --></center>
+
+		 
+   </div>
+   <!-- End Wrapper -->
+	
+</body>
+</html>

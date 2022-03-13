@@ -1,0 +1,316 @@
+<!DOCTYPE HTML PUBLIC"-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+<body> 
+
+<table width="100%" style="height: 100%;" cellpadding="10" cellspacing="" border="0">
+
+<body link="black">
+
+
+
+
+
+
+<td colspan="2" style="height:100;" cellpadding="10" cellspacing="0" border="2" bgcolor="white"></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+<center><div><img src="header.gif" width="800px"></div><center>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><align="center"><h2 align="center"><script language="JavaScript1.2">
+var scrollerwidth='900px'
+var scrollerheight='420px'
+var scrollerbgcolor='white'
+//2000 miliseconds=2 seconds
+var pausebetweenimages=4000
+
+
+//configure the below variable to change the images used in the slideshow. If you wish the images to be clickable, simply wrap the images with the appropriate <a> tag
+var slideimages=new Array()
+
+slideimages[0]='<href=""<img src="123items.gif"   width="900px"/></a>'
+
+slideimages[1]='<href=""><img src="456items.gif"  width="900px"/></a>'
+
+slideimages[2]='<href=""><img src="789items.gif"  width="900px"/></a>' 
+
+slideimages[3]='<href=""><img src="10items.gif" width="900px"/></a>'
+
+
+     
+var ie=document.all
+var dom=document.getElementById
+
+if (slideimages.length>1)
+i=2
+else
+i=0
+
+function move1(whichlayer){
+tlayer=eval(whichlayer)
+if (tlayer.left>0&&tlayer.left<=5){
+tlayer.left=0
+setTimeout("move1(tlayer)",pausebetweenimages)
+setTimeout("move2(document.main.document.second)",pausebetweenimages)
+return
+}
+if (tlayer.left>=tlayer.document.width*-1){
+tlayer.left-=5
+setTimeout("move1(tlayer)",50)
+}
+else{
+tlayer.left=parseInt(scrollerwidth)+5
+tlayer.document.write(slideimages[i])
+tlayer.document.close()
+if (i==slideimages.length-1)
+i=0
+else
+i++
+}
+}
+
+function move2(whichlayer){
+tlayer2=eval(whichlayer)
+if (tlayer2.left>0&&tlayer2.left<=5){
+tlayer2.left=0
+setTimeout("move2(tlayer2)",pausebetweenimages)
+setTimeout("move1(document.main.document.first)",pausebetweenimages)
+return
+}
+if (tlayer2.left>=tlayer2.document.width*-1){
+tlayer2.left-=5
+setTimeout("move2(tlayer2)",50)
+}
+else{
+tlayer2.left=parseInt(scrollerwidth)+5
+tlayer2.document.write(slideimages[i])
+tlayer2.document.close()
+if (i==slideimages.length-1)
+i=0
+else
+i++
+}
+}
+
+function move3(whichdiv){
+tdiv=eval(whichdiv)
+if (parseInt(tdiv.style.left)>0&&parseInt(tdiv.style.left)<=5){
+tdiv.style.left=0+"px"
+setTimeout("move3(tdiv)",pausebetweenimages)
+setTimeout("move4(scrollerdiv2)",pausebetweenimages)
+return
+}
+if (parseInt(tdiv.style.left)>=tdiv.offsetWidth*-1){
+tdiv.style.left=parseInt(tdiv.style.left)-5+"px"
+setTimeout("move3(tdiv)",50)
+}
+else{
+tdiv.style.left=scrollerwidth
+tdiv.innerHTML=slideimages[i]
+if (i==slideimages.length-1)
+i=0
+else
+i++
+}
+}
+
+function move4(whichdiv){
+tdiv2=eval(whichdiv)
+if (parseInt(tdiv2.style.left)>0&&parseInt(tdiv2.style.left)<=5){
+tdiv2.style.left=0+"px"
+setTimeout("move4(tdiv2)",pausebetweenimages)
+setTimeout("move3(scrollerdiv1)",pausebetweenimages)
+return
+}
+if (parseInt(tdiv2.style.left)>=tdiv2.offsetWidth*-1){
+tdiv2.style.left=parseInt(tdiv2.style.left)-5+"px"
+setTimeout("move4(scrollerdiv2)",50)
+}
+else{
+tdiv2.style.left=scrollerwidth
+tdiv2.innerHTML=slideimages[i]
+if (i==slideimages.length-1)
+i=0
+else
+i++
+}
+}
+
+function startscroll(){
+if (ie||dom){
+scrollerdiv1=ie? first2 : document.getElementById("first2")
+scrollerdiv2=ie? second2 : document.getElementById("second2")
+move3(scrollerdiv1)
+scrollerdiv2.style.left=scrollerwidth
+}
+else if (document.layers){
+document.main.visibility='show'
+move1(document.main.document.first)
+document.main.document.second.left=parseInt(scrollerwidth)+5
+document.main.document.second.visibility='show'
+}
+}
+
+window.onload=startscroll
+
+</script>
+
+
+
+
+<ilayer id="main" width=&{scrollerwidth}; height=&{scrollerheight}; bgColor=&{scrollerbgcolor}; visibility=hide>
+<layer id="first" left=1 top=0 width=&{scrollerwidth}; >
+<script language="JavaScript1.2">
+if (document.layers)
+document.write(slideimages[0])
+</script>
+</layer>
+<layer id="second" left=0 top=0 width=&{scrollerwidth}; visibility=hide>
+<script language="JavaScript1.2">
+if (document.layers)
+document.write(slideimages[1])
+</script>
+</layer>
+</ilayer>
+
+<script language="JavaScript1.2">
+if (ie||dom){
+document.writeln('<div id="main2" style="position:relative;width:'+scrollerwidth+';height:'+scrollerheight+';overflow:hidden;background-color:'+scrollerbgcolor+'">')
+document.writeln('<div style="position:absolute;width:'+scrollerwidth+';height:'+scrollerheight+';clip:rect(0 '+scrollerwidth+' '+scrollerheight+' 0);left:0px;top:0px">')
+document.writeln('<div id="first2" style="position:absolute;width:'+scrollerwidth+';left:1px;top:0px;">')
+document.write(slideimages[0])
+document.writeln('</div>')
+document.writeln('<div id="second2" style="position:absolute;width:'+scrollerwidth+';left:0px;top:0px">')
+document.write(slideimages[1])
+document.writeln('</div>')
+document.writeln('</div>')
+document.writeln('</div>')
+}
+</script></div>
+
+
+
+
+
+
+
+
+
+
+<center><div><img src="futurestory.gif" width="750px"></div><center>
+
+
+
+
+
+
+<div>
+<center>
+<style type="text/css">
+
+.hovermenu ul{
+font: bold 17px times new roman;
+padding-left: 0;
+margin-left: 0;
+height: 20px;
+}
+
+.hovermenu ul li{
+list-style: none;
+display: inline;
+}
+
+.hovermenu ul li a{
+padding: 2px 0.5em;
+text-decoration: none;
+float: center;
+color: white;
+background-color: ;
+border: 0px solid ;
+}
+
+.hovermenu ul li a:hover{
+background-color:____ ;
+border-style: outset:____;
+}
+
+html>body .hovermenu ul li a:active{ /* Apply mousedown effect only to NON IE browsers */
+border-style: inset;
+}
+
+</style>
+</head>
+
+</div>
+
+
+
+
+<div class="hovermenu">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Iraq_War"></a>Iraq War</li>
+<li><a href="http://en.wikipedia.org/wiki/South_Park"></a>South Park</li>
+<li><a href="http://en.wikipedia.org/wiki/IPad"></a>ipad</li>
+<li><a href="http://en.wikipedia.org/wiki/Bugatti_Veyron"></a>Bugatti Veyron</li>
+<li><a href="http://en.wikipedia.org/wiki/3D_television"></a>3D T.V.</li>
+<li><a href="http://en.wikipedia.org/wiki/Avatar_%282009_film%29"></a>Avatar</li>
+<li><a href="http://en.wikipedia.org/wiki/Xbox_360"></a>Xbox 360</li>
+<li><a href="http://en.wikipedia.org/wiki/Barack_Obama"></a>Barack Obama</li>
+<li><a href="http://en.wikipedia.org/wiki/BMW_X6"></a>BMW X6</li>
+<li><a href="http://en.wikipedia.org/wiki/United_States_public_debt"></a>National Debt</li>
+</ul>
+</div><center>
+
+<bold><a href="mailto:tylerstefanic@gmail.com">Email Me</a><bold> 
+
+
+
+
+<body>
+<html>

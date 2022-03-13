@@ -1,0 +1,159 @@
+/*
+      Created by Keith Donegan of Code-Sucks.com
+	  
+	  E-Mail: Keithdonegan@gmail.com
+	  
+	  You can do whatever you want with these layouts,
+	  but it would be greatly appreciated if you gave a link
+	  back to http://www.code-sucks.com
+	  
+*/
+<style type="text/css">
+
+.aerobuttonmenu{ /*container that holds a row of aero buttons*/
+overflow: hidden; /*See: http://www.quirksmode.org/css/clearing.html */
+width: auto;
+background: #F7F7F7; /*menu strip background*/
+border: 1px solid gray;
+padding: 4px 0;
+border-width: 1px 0;
+}
+
+* html .aerobuttonmenu{ /*IE6 and below hack. Set explicit strip width*/
+width: 100%;
+}
+
+.aerobuttonmenu a.aero{ /*aero button CSS*/
+background: transparent url('media/aeroleft.gif') no-repeat top left;
+display: block;
+float: left;
+font: bold 13px Verdana, Trebuchet MS; /* Change 13px as desired */
+line-height: 23px; /* This value + 8px should equal height of button background (default is 31px) */
+height: 31px; /* Height of button background height */
+padding-left: 10px; /* Width of left menu image */
+text-decoration: none;
+margin-right: 5px; /*spacing between buttons*/
+filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90); /*this and next two rules control opacity of buttons before hover*/
+opacity: 0.9;
+-moz-opacity: 0.9;
+}
+
+.aerobuttonmenu a.aero:link, .aerobuttonmenu a.aero:visited, .aerobuttonmenu a:active{
+color: white; /*button text color*/
+}
+
+.aerobuttonmenu a.aero span{
+background: transparent url('media/aeroright.gif') no-repeat top right;
+display: block;
+padding: 4px 10px 6px 0; /*Set 10px here to match value of 'padding-left' value above*/
+}
+
+.aerobuttonmenu a.aero:hover{ /* Hover state CSS */
+filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100); /*this and next two rules control opacity of buttons during hover*/
+opacity: 1;
+-moz-opacity: 0.99;
+}
+
+.aerobuttonmenu a.aero:hover span{ /* Hover state CSS (for text) */
+color: #993300;
+}
+
+.black a.aero{
+background-image: url('media/aeroleftblack.gif');
+}
+
+.black a.aero span{
+background-image: url('media/aerorightblack.gif');
+}
+
+.aerobuttonmenu .rightsection{
+float: right;
+width: 100px;
+position: relative;
+top: 3px;
+padding-right: 5px;
+text-align: right;
+}
+
+.aerobuttonmenu .rightsection a{
+color: navy;
+}
+
+</style>
+
+
+
+
+
+
+* { padding: 0; margin: 0; }
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 13px;
+ background: url(bauer.jpg) repeat;
+}
+#wrapper { 
+ margin: 0 auto;
+ width: 922px;
+}
+#header {
+ color: #333;
+ width: 900px;
+ float: left;
+ padding: 10px;
+ border: 1px solid #ccc;
+ height: 100px;
+ margin: 10px 0px 5px 0px;
+ background: #BD9C8C;
+}
+#navigation {
+ float: left;
+ width: 900px;
+ color: #333;
+ padding: 10px;
+ border: 1px solid #ccc;
+ margin: 0px 0px 5px 0px;
+ background: #BD9C8C;
+}
+#leftcolumn { 
+ color: #333;
+ border: 1px solid #ccc;
+ background: #E7DBD5;
+ margin: 0px 5px 5px 0px;
+ padding: 10px;
+ height: 600px;
+ width: 195px;
+ float: left;
+}
+#content { 
+ float: left;
+ color: #333;
+ border: 1px solid #ccc;
+ background: #F2F2E6;
+ margin: 0px 5px 5px 0px;
+ padding: 10px;
+ height: 600px;
+ width: 456px;
+ display: inline;
+}
+#rightcolumn { 
+ color: #333;
+ border: 1px solid #ccc;
+ background: #E7DBD5;
+ margin: 0px 0px 5px 0px;
+ padding: 10px;
+ height: 600px;
+ width: 195px;
+ float: left;
+}
+#footer { 
+ width: 900px;
+ clear: both;
+ color: #333;
+ border: 1px solid #ccc;
+ background: #BD9C8C;
+ margin: 0px 0px 10px 0px;
+ padding: 10px;
+}
+

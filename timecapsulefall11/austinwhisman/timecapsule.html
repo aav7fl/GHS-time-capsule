@@ -1,0 +1,260 @@
+<!--Force IE6 into quirks mode with this comment tag-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Dynamic Drive: CSS Left and Right Frames Layout</title>
+<style type="text/css">
+
+
+
+}
+
+h1 { color:white;
+}
+
+
+}
+
+h3 { color:white;
+}
+
+}
+
+h2 { color: cyan;
+}
+
+
+}
+
+h4 { color: red;
+}
+
+body{
+background-image: url("blue.jpg");
+margin: 0;
+padding: 0;
+border: 0;
+overflow: hidden;
+height: 100%; 
+max-height: 100%; 
+}
+
+#framecontentLeft, #framecontentRight{
+position: absolute; 
+top: 0; 
+left: 0; 
+width: 200px; /*Width of left frame div*/
+height: 100%;
+overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+background-image: url("side.jpg");
+color: white;
+}
+
+#framecontentRight{
+left: auto;
+right: 0; 
+width: 150px; /*Width of right frame div*/
+overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+background-image: url("side.jpg");
+color: white;
+}
+
+#maincontent{
+position: fixed; 
+top: 0;
+left: 200px; /*Set left value to WidthOfLeftFrameDiv*/
+right: 150px; /*Set right value to WidthOfRightFrameDiv*/
+bottom: 0;
+overflow: auto; 
+
+background-image: url("blue.jpg");
+}
+
+.innertube{
+margin: 15px; /*Margins for inner DIV inside each DIV (to provide padding)*/
+}
+
+* html body{ /*IE6 hack*/
+padding: 0 150px 0 200px; /*Set value to (0 WidthOfRightFrameDiv 0 WidthOfLeftFrameDiv)*/
+}
+
+* html #maincontent{ /*IE6 hack*/
+height: 100%; 
+width: 100%; 
+}
+
+
+#maincontainer{
+width: 840px; /*Width of main container*/
+margin: 0 auto; /*Center container on page*/
+}
+
+#c1-2 {
+		color:cyan;
+	}
+
+
+
+</style>
+
+
+<style type="text/css">
+
+.gradientbuttons ul{
+padding: 3px 0;
+margin-left: 0;
+margin-top: 1px;
+margin-bottom: 0;
+font: bold 13px Verdana;
+list-style-type: none;
+text-align: center; /*set to left, center, or right to align the menu as desired*/
+}
+
+.gradientbuttons li{
+display: inline;
+margin: 0;
+}
+
+.gradientbuttons li a{
+text-decoration: none;
+padding: 5px 7px;
+margin-right: 5px;
+border: 1px solid #778;
+color: white;
+border:1px solid gray;
+background: #3282c2;
+border-radius: 8px; /*w3c border radius*/
+box-shadow: 3px 3px 4px rgba(0,0,0,.5); /* w3c box shadow */
+-moz-border-radius: 8px; /* mozilla border radius */
+-moz-box-shadow: 3px 3px 4px rgba(0,0,0,.5); /* mozilla box shadow */
+background: -moz-linear-gradient(center top, #a4ccec, #72a6d4 25%, #3282c2 45%, #357cbd 85%, #72a6d4); /* mozilla gradient background */
+-webkit-border-radius: 8px; /* webkit border radius */
+-webkit-box-shadow: 3px 3px 4px rgba(0,0,0,.5); /* webkit box shadow */
+background: -webkit-gradient(linear, center top, center bottom, from(#a4ccec), color-stop(25%, #72a6d4), color-stop(45%, #3282c2), color-stop(85%, #357cbd), to(#72a6d4)); /* webkit gradient background */
+}
+
+.gradientbuttons li a:hover{
+color: lightyellow;
+}
+
+.redtheme li a{
+font-size:18px;
+background: darkred;
+background: -moz-linear-gradient(center top, #f5795d, #e55e3f 25%, #d02700 45%, #e55e3f 85%, #f5795d);
+background: -webkit-gradient(linear, center top, center bottom, from(#f5795d), color-stop(25%, #e55e3f), color-stop(45%, #d02700), color-stop(85%, #e55e3f), to(#f5795d)); 
+}
+
+.greentheme li a{
+font-size:12px;
+background: green;
+background: -moz-linear-gradient(center top, #7ad690, #3ec05c 25%, #298a40 45%, #3ec05c 85%, #7ad690);
+background: -webkit-gradient(linear, center top, center bottom, from(#7ad690), color-stop(25%, #3ec05c), color-stop(45%, #298a40), color-stop(85%, #3ec05c), to(#7ad690)); 
+}
+
+.blacktheme li a{
+font-size:16px;
+background: black;
+background: -moz-linear-gradient(center top, #9f9f9f, #686868 25%, #2a2a2a 45%, #686868 85%, #9f9f9f);
+background: -webkit-gradient(linear, center top, center bottom, from(#9f9f9f), color-stop(25%, #686868), color-stop(45%, #2a2a2a), color-stop(85%, #686868), to(#9f9f9f)); 
+}
+
+.orangetheme li a{
+font-size:14px;
+background: #e55e3f;
+background: -moz-linear-gradient(center top, #ecad9a, #e5937c 25%, #cf4c2a 45%, #e5937c 85%, #ecad9a);
+background: -webkit-gradient(linear, center top, center bottom, from(#ecad9a), color-stop(25%, #e5937c), color-stop(45%, #cf4c2a), color-stop(85%, #e5937c), to(#ecad9a)); 
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<div id="framecontentLeft">
+<div class="innertube">
+
+<center><h1>Quote</h2>
+<p><h2>Bob Marley</h2> <br> 
+<h3> "The people who are trying to make this world worse aren’t taking a day off. How can I?"</h3><br>
+<h4> </h4></p></center>
+<br>
+<br>
+<center><img src="bob2.jpg" alt="Bob Marley"> </center>
+<br>
+<br>
+<centeR><img src="ray.jpg" alt="Bob Marley"> </center>
+</div>
+</div>
+
+<div id="framecontentRight">
+<div class="innertube">
+
+<center><h1></h2>
+<p><h2></h2> 
+<h3> </h3>
+<h4> This is a significant quote to me in two ways. One is with all the damaging things you see of how the selfish concerns of mankind is killing
+the enviornment and is the sole purpose for the failure of our very own economy. Also I take it in the way for motiviation in the gym. I hope to take Rugby to a far level and in order for my self to do that personally I have to work my ass of for it.
+I realize I am not the only person working for this goal. They're are other guys out there working hard too and I need to take advatage of the time I have now and use it to better my self as an athelete and a person everyday.</h4></p></center>
+
+</div>
+</div>
+
+
+<div id="maincontent">
+<div class="gradientbuttons">
+<ul>
+<li><a href="popculture.htm"> Pop Culture</a></li>
+<li><a href="lit.htm"> significant literature</a></li>
+
+</ul>
+</div>
+
+
+<center><h1> 2011 Time Capsule </h1> </center>
+<div class="innertube">
+
+
+<center><p><h2> Letter to my self </h2> </p></center>
+
+<center><p><h3> As I'm typing this to you future Whizzy I sure hope all your hardwork and concious thinking has paid off. Even if you're in a slump as you read this old letter just remember things always gets better.
+There will always be good people to find and build a relationship with such as the fine fellow beside me now,Trevor sexy Sousely. Hopefully you're graduated from college with whatever major I decided to work with and am
+making a name for myself. Make good use of your  one sacrifice. If you've lost contact with Anthony Biondo, regain it. we've helped each other through so much; keep him close by always, he's family. Now I really hope I've stuck to 
+hitting the gym because Getting strong has always been a quality I've strived for, plus you're an adult now; gotta troll the big men now. Hopefully you're still close to our family and help dad when you can regardless of living
+at home or not. Right now I plan on going to western and majoring in Computer engineering and minoring in Bio-medical engineering. I'm working out hard in preperation for the Spring rugby season and I'm surrounded with 
+friends who click perfectly with us in all our ways. Out of our small group I unite them together in all honesty and they all consult to me knowing I can keep a secret and be supportive.<br>
+_________________________________________________________________________________________________________________________________________________________ <br>
+ </h3> </p></center>
+ 
+ <center><p><h2> Happiness</h2></p></center>
+<center><p><h3> Definition of happiness isn't an act of self accomplishment. Happiness has to be acheived as a group effort. No matter how accomplished you are if no one ever shows appreciation, or if those 
+who surround you are negative then you yourself will be brought down also. So make sure you're surrounding yourself with the right people and not someone who is just selfish and is going to use you. But at the same time you 
+can't just rely on others to make you happy. everyone plays a part in making others happy, but you play the biggest role in your own self happiness. <br> <img src="yoshi.jpg" alt="so happy!"> <br>
+_________________________________________________________________________________________________________________________________________________________  </h3></p></center>
+
+
+
+
+ <center><p><h2> Freedom</h2></p></center>
+<center><p><h3> America. enough said dude lessgo.<br>
+<img src="flag.jpg" alt="">
+_________________________________________________________________________________________________________________________________________________________  </h3></p></center>
+
+<center> <h2>The future</h2> </center>
+	<center> <p><h4> I predict ten years from now all our daily items will be made into one mobile source. By this I mean I feel our phones, our keys, our credit cards, internet source  etc. <br> will all be carried and identified by the user only. This
+	invention will define the owner just as much as their own name. I also predict there will be a new superpower of fuel used <br>thats more effecient then fossil fuels and cheaper, but in oder for the economy to work the government will 
+	find ways to jack up prices. cars will also have a source to heat foods with.</h4> </p> </center>
+
+</div>
+
+</div>
+</div>
+
+
+
+
+</body>
+</html>

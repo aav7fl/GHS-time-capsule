@@ -1,0 +1,110 @@
+body{
+margin:0;
+padding:0;
+line-height: 1.5em;]
+}
+
+b{font-size: 110%;}
+em{color: red;}
+
+#maincontainer{
+width: 840px; /*Width of main container*/
+margin: 0 auto; /*Center container on page*/
+background: #ffff99;
+}
+
+#topsection{
+background: #0000ff;
+height: 110px; /*Height of top section*/
+}
+
+#topsection h1{
+margin: 0;
+padding-top: 15px;
+}
+
+#contentwrapper{
+float: left;
+width: 100%;
+}
+
+#contentcolumn{
+margin: 0 190px 0 180px; /*Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth*/
+}
+
+#leftcolumn{
+float: left;
+width: 182px; /*Width of left column in pixel*/
+height: 700px;
+margin-left: -840px; /*Set margin to that of -(MainContainerWidth)*/
+background: #C8FC98;
+}
+
+#rightcolumn{
+float: left;
+width: 190px; /*Width of right column*/
+height: 700px;
+margin-left: -190px; /*Set left margin to -(RightColumnWidth)*/
+background: #C8FC98;
+}
+
+#footer{
+clear: left;
+width: 100%;
+background: red;
+color: #FFF;
+text-align: center;
+padding: 4px 0;
+}
+
+#footer a{
+color: #FFFF80;
+}
+
+.innertube{
+margin: 10px; /*Margins for inner DIV inside each column (to provide padding)*/
+margin-top: 0;
+}
+
+
+.arrowgreen{
+	width: 180px; /*width of menu*/
+	border-style: solid solid none solid;
+	border-color: #94AA74;
+	border-size: 1px;
+	border-width: 1px;
+}
+
+.arrowgreen ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+	
+.arrowgreen li a{
+	font: bold 12px Verdana, Arial, Helvetica, sans-serif;
+	display: block;
+	background: transparent url(media/arrowgreen.gif) 100% 0;
+  height: 24px; /*Set to height of bg image- padding within link (ie: 32px - 4px - 4px)*/
+	padding: 4px 0 4px 10px;
+	line-height: 24px; /*Set line-height of bg image- padding within link (ie: 32px - 4px - 4px)*/
+	text-decoration: none;
+}	
+	
+.arrowgreen li a:link, .arrowgreen li a:visited {
+	color: #5E7830;
+}
+
+.arrowgreen li a:hover{
+	color: #26370A;
+	background-position: 100% -32px;
+}
+
+	
+.arrowgreen li a.selected{
+	color: #26370A;
+	background-position: 100% -64px;
+}
+
+
+

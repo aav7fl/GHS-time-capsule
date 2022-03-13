@@ -1,0 +1,137 @@
+/*
+      Created by Keith Donegan of Code-Sucks.com
+	  
+	  E-Mail: Keithdonegan@gmail.com
+	  
+	  You can do whatever you want with these layouts,
+	  but it would be greatly appreciated if you gave a link
+	  back to http://www.code-sucks.com
+	  
+*/
+
+* { padding: 0; margin: 0; }
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 13px;
+ background-image:url(bkground3.gif);
+ background-repeat: repeat;
+ 
+ 
+ 
+}
+#wrapper { 
+ margin: 0 auto;
+ width: 924px;
+}
+#header {
+ color: #FF8C00;
+ width: 900px;
+ float: left;
+ padding: 5px;
+ border: 2px solid #ccc #FF8C00;
+ height: 100px;
+ margin: 10px 0px 0px 0px;
+ background: #000000;
+}
+#navigation {
+float: left;
+ width: 900px;
+ color: #333;
+ padding: 5px;
+ border: 2px solid #FF8C00;
+ margin: 0px 0px 0px 0px;
+ background: #000000;
+
+}
+#leftcolumn { 
+ color: #FF8C00;
+ border: 2px solid #FF8C00;
+ background: #00000;
+ margin: 0px 0px 0px 0px;
+ padding: 5px;
+ height: 400px;
+ width: 200px;
+ float: left;
+}
+#content { 
+ float: left;
+ color: #FF8C00;
+ border: 2px solid #FF8C00;
+ background: #000000;
+ margin: 0px 0px 0px 0px;
+ padding: 5px;
+ height: 400px;
+ width: 456px;
+ display: inline;
+}
+#rightcolumn { 
+ color: #FF8C00;
+ border: 2px solid #FF8C00;
+ background: #000000;
+ margin: 0px 0px 0px 0px;
+ padding: 5px;
+ height: 400px;
+ width: 200px;
+ float: left;
+}
+#footer { 
+ width: 884px;
+ clear: both;
+ color: #333;
+ border: 2px solid #FF8C00;
+ background: #000000;
+ margin: 0px 0px 10px 0px;
+ padding: 5px;
+}
+
+
+.circlemenu{
+width: 100%;
+overflow:hidden;
+}
+
+.circlemenu ul{
+margin: 0;
+padding: 0;
+font: bold 14px Verdana;
+list-style-type: none;
+text-align: center; /* "left", "center", or "right" align menu */
+}
+
+.circlemenu li{
+display: inline;
+margin: 0;
+}
+
+.circlemenu li a{
+display:inline-block;
+text-align:center;
+text-decoration: none;
+color: white;
+background:#FF8C00;
+margin: 0;
+margin-right:5px; /*right spacing between each link */
+width:100px;
+height:100px;
+border-radius: 400px; /*really large border radius to create round borders*/
+-moz-border-radius: 400px;
+-webkit-border-radius: 400px;
+}
+
+.circlemenu a span{
+position:relative;
+top:40%;
+}
+
+.circlemenu li a:visited{
+color: white;
+}
+
+.circlemenu a:hover{
+background: #a71b15;
+}
+
+
+
+

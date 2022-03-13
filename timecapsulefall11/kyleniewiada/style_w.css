@@ -1,0 +1,89 @@
+#menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 900px;
+	height: 430px;
+	position: relative;
+}
+#menu span {
+	display: none;
+	position: absolute;
+}
+#menu a {
+	display: block;
+	text-indent: -900%;
+	position: absolute;
+	outline: none;
+	background-image: url(images/menu-bg_w.jpg);
+}
+#menu a:hover {
+	background-position: left bottom;
+}
+#menu a:hover span{
+	display: block;
+}
+#menu .home {
+	width: 144px;
+	height: 116px;
+	background: url(images/home_w.png) no-repeat;
+	left: 323px;
+	top: 264px;
+}
+#menu .ahome {
+	width: 144px;
+	height: 116px;
+	background: url(images/home2_w.png) no-repeat;
+	left: 323px;
+	top: 264px;
+}
+#menu .home span {
+	width: 144px;
+	height: 116px;
+	background: url(images/home2_w.png) no-repeat;
+	left: 0px;
+	top: 0px;
+}
+#menu .mind {
+	width: 120px;
+	height: 80px;
+	background: url(images/mind_w.png) no-repeat;
+  left: 545px;
+	top: 237px;
+}
+#menu .amind {
+	width: 120px;
+	height: 80px;
+	background: url(images/mind2_w.png) no-repeat;
+	left: 545px;
+	top: 237px;
+	}
+#menu .mind span {
+	width: 120px;
+	height: 80px;
+	background: url(images/mind2_w.png) no-repeat;
+	left: 0px;
+	top: 0px;
+	
+}
+#menu .flashback {
+	width: 108px;
+	height: 100px;
+	background: url(images/flashback_w.png) no-repeat;
+	left: 137px;
+	top: 237px;
+}
+#menu .aflashback {
+	width: 108px;
+	height: 100px;
+	background: url(images/flashback2_w.png) no-repeat;
+	left: 137px;
+	top: 237px;
+}
+#menu .flashback span {
+	width: 108px;
+	height: 100px;
+	background: url(images/flashback2_w.png) no-repeat;
+	left: 0px;
+	top: 0px;
+}

@@ -1,0 +1,113 @@
+* { padding: 0; margin: 0; }
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 13px;
+ background-image: url('tcbackground.jpg');
+}
+#wrapper { 
+ margin: 0 auto;
+ width: 925px;
+}
+#header {
+ color: black;
+ width: 896px;
+ float: left;
+ padding: 10px;
+ border: 1px solid black;
+ height: 90px;
+ margin: 10px 0px 5px 0px;
+ background: #a6a6a6;
+}
+#leftcolumn { 
+ color: #7FFFD4;
+ border: 2px solid #00FFFF;
+ background: black;
+ margin: 0px 5px 5px 0px;
+ padding: 10px;
+ height: 346px;
+ width: 191px;
+ float: left;
+}
+#content { 
+ float: left;
+ color: #F5F5F5;
+ border: 2px solid #00FFFF;
+ background: #008B8B;
+ margin: 0px 5px 5px 0px;
+ padding: 10px;
+ height: 346px;
+ width: 452px;
+ display: inline;
+}
+#rightcolumn { 
+ color: #7FFFD4;
+ border: 2px solid #00FFFF;
+ background: black;
+ margin: 0px 0px 5px 0px;
+ padding: 10px;
+ height: 348px;
+ width: 191px;
+ float: left;
+ position: relative;
+ scrollbar-base-color:#00FFFF;
+}
+
+
+
+ul.svertical{
+width: 200px; /* width of menu */
+overflow: auto;
+background: black; /* background of menu */
+margin: 0;
+padding: 0;
+padding-top: 7px; /* top padding */
+list-style-type: none;
+}
+
+ul.svertical li{
+text-align: right; /* right align menu links */
+}
+
+ul.svertical li a{
+position: relative;
+display: inline-block;
+text-indent: 5px;
+overflow: hidden;
+background: #7FFFD4; /* initial background color of links */
+font: bold 16px Germand;
+text-decoration: none;
+padding: 5px;
+margin-bottom: 7px; /* spacing between links */
+color: black;
+-moz-box-shadow: inset -7px 0 5px rgba(114,114,114, 0.8); /* inner right shadow added to each link */
+-webkit-box-shadow: inset -7px 0 5px rgba(114,114,114, 0.8);
+box-shadow: inset -7px 0 5px rgba(114,114,114, 0.8);
+-moz-transition: all 0.2s ease-in-out; /* CSS3 transition of hover properties */
+-webkit-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+
+ul.svertical li a:hover{
+padding-right: 30px; /* add right padding to expand link horizontally to the left */
+color: black;
+background: #19FFFF;
+-moz-box-shadow: inset -3px 0 2px rgba(114,114,114, 0.8); /* contract inner right shadow */
+-webkit-box-shadow: inset -3px 0 5px rgba(114,114,114, 0.8);
+box-shadow: inset -3px 0 5px rgba(114,114,114, 0.8);
+}
+
+ul.svertical li a:before{ /* CSS generated content: slanted right edge */
+content: "";
+position: absolute;
+left: 0;
+top: 0;
+border-style: solid; 
+border-width: 70px 0 0 20px; /* Play around with 1st and 4th value to change slant degree */
+border-color: transparent transparent transparent black; /* change black to match the background color of the menu UL */
+
+}
+
+

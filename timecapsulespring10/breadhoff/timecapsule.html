@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Throughout 
+Description: A two-column, fixed-width design for 1024x768 screen resolutions.
+Version    : 1.0
+Released   : 20100423
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Time Capsule</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<script type="text/javascript" src="jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="jquery/jquery.slidertron-0.1.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<style type="text/css">
+@import "slidertron.css";
+</style>
+</head>
+<body>
+<!-- end #header-wrapper -->
+<div id="logo">
+	<center><h1>The Time Capsule of 2010</h1></center>
+
+</div>
+<!-- end #header -->
+<hr />
+<!-- end #logo -->
+<div id="slideshow">
+	<!-- start -->
+	<div id="foobar">
+		<div id="col1"><a href="#" class="previous">&nbsp;</a></div>
+		<div id="col2">
+			<div class="viewer">
+				<div class="reel">
+					<div class="slide"><img src="images/xbox360.jpg" width="726" height="336" alt="" /> <span><center>One of the Decades top selling consoles.<br>Making mancaves more popular since 2005.</center></span> </div>
+					<div class="slide"><img src="images/hdtv.jpg" width="726" height="336" alt="" /> <span><center>Set the new standard for television.<br>Because i need to see every bead of sweat on a man, think about how that sounded.</center></span> </div>
+					<div class="slide"><img src="images/halo.png" width="726" height="336" alt="" /> <span><center>Top Selling Franchise of the new decade.<br>Brought FPS into the mainstream market as a top genre.</center></span> </div>
+					<div class="slide"><img src="images/facebook.jpg" width="726" height="336" alt="" /> <span><center>Making the internet, and your grandma, even more popular.<br>Made bloging one of the internets top features next to youtube and google.</center></span> </div>
+					<div class="slide"><img src="images/avatar.jpg" width="726" height="336" alt="" /> <span><center>Reaching the next milestone in Computer Graphics, and creating the "Avatards".<br>Was the highest grossing movie ever as of 2010.</center></span> </div>
+					<div class="slide"><img src="images/eminem.jpg" width="726" height="336" alt="" /> <span><center>The top grossing artist of the new Decade.<br>Hates a LOT of stuff, even your mom.</center></span> </div>
+					<div class="slide"><img src="images/mj.JPG" width="726" height="336" alt="" /> <span><center>The King of Pop.<br>Once made fun of all over the world, now you are looked down upon.</center></span> </div>
+					<div class="slide"><img src="images/911.JPG" width="726" height="336" alt="" /> <span><center>We will never forget.<br>Started the War on Terrorism.</center></span> </div>
+					<div class="slide"><img src="images/ipod.png" width="726" height="336" alt="" /> <span><center>Making CD's look middle aged.<br>have you ever seen the dance comercials?</center></span> </div>
+					<div class="slide"><img src="images/idol.jpg" width="726" height="336" alt="" /> <span><center>Creating the British sterotype, one rude remark at a time.<br>Was the biggest television show of the Decade.</center></span> </div>
+				</div>
+			</div>
+		</div>
+		<div id="col3"><a href="#" class="next">&nbsp;</a></div>
+	</div>
+	<script type="text/javascript">
+
+						$('#foobar').slidertron({
+							viewerSelector:			'.viewer',
+							reelSelector:			'.viewer .reel',
+							slidesSelector:			'.viewer .reel .slide',
+							navPreviousSelector:	'.previous',
+							navNextSelector:		'.next',
+							navFirstSelector:		'.first',
+							navLastSelector:		'.last'
+						});
+						
+					</script>
+	<!-- end -->
+</div>
+</body>
+</html>

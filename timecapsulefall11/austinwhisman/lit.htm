@@ -1,0 +1,206 @@
+<!--Force IE6 into quirks mode with this comment tag-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Dynamic Drive: CSS Left and Right Frames Layout</title>
+<style type="text/css">
+}
+
+h3 { color:yellow;
+}
+
+}
+
+h1 { color:white;
+}
+
+body{
+margin: 0;
+padding: 0;
+border: 0;
+overflow: hidden;
+height: 100%; 
+max-height: 100%; 
+}
+
+#framecontentLeft, #framecontentRight{
+position: absolute; 
+top: 0; 
+left: 0; 
+width: 200px; /*Width of left frame div*/
+height: 100%;
+overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+background-color: #cc9966;
+color: white;
+}
+
+#framecontentRight{
+left: auto;
+right: 0; 
+width: 150px; /*Width of right frame div*/
+overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+background-color: #cc9966;
+color: white;
+}
+
+#maincontent{
+position: fixed; 
+top: 0;
+left: 200px; /*Set left value to WidthOfLeftFrameDiv*/
+right: 150px; /*Set right value to WidthOfRightFrameDiv*/
+bottom: 0;
+overflow: auto; 
+background: #663300;
+}
+
+.innertube{
+margin: 15px; /*Margins for inner DIV inside each DIV (to provide padding)*/
+}
+
+* html body{ /*IE6 hack*/
+padding: 0 150px 0 200px; /*Set value to (0 WidthOfRightFrameDiv 0 WidthOfLeftFrameDiv)*/
+}
+
+* html #maincontent{ /*IE6 hack*/
+height: 100%; 
+width: 100%; 
+}
+
+</style>
+
+<script type="text/javascript">
+/*** Temporary text filler function. Remove when deploying template. ***/
+var gibberish=["This is just some filler text", "Welcome to Dynamic Drive CSS Library", "Demo content nothing to read here"]
+function filltext(words){
+for (var i=0; i<words; i++)
+document.write(gibberish[Math.floor(Math.random()*3)]+" ")
+}
+</script>
+
+<style type="text/css">
+
+.gradientbuttons ul{
+padding: 3px 0;
+margin-left: 0;
+margin-top: 1px;
+margin-bottom: 0;
+font: bold 13px Verdana;
+list-style-type: none;
+text-align: center; /*set to left, center, or right to align the menu as desired*/
+}
+
+.gradientbuttons li{
+display: inline;
+margin: 0;
+}
+
+.gradientbuttons li a{
+text-decoration: none;
+padding: 5px 7px;
+margin-right: 5px;
+border: 1px solid #778;
+color: white;
+border:1px solid gray;
+background: #3282c2;
+border-radius: 8px; /*w3c border radius*/
+box-shadow: 3px 3px 4px rgba(0,0,0,.5); /* w3c box shadow */
+-moz-border-radius: 8px; /* mozilla border radius */
+-moz-box-shadow: 3px 3px 4px rgba(0,0,0,.5); /* mozilla box shadow */
+background: -moz-linear-gradient(center top, #a4ccec, #72a6d4 25%, #3282c2 45%, #357cbd 85%, #72a6d4); /* mozilla gradient background */
+-webkit-border-radius: 8px; /* webkit border radius */
+-webkit-box-shadow: 3px 3px 4px rgba(0,0,0,.5); /* webkit box shadow */
+background: -webkit-gradient(linear, center top, center bottom, from(#a4ccec), color-stop(25%, #72a6d4), color-stop(45%, #3282c2), color-stop(85%, #357cbd), to(#72a6d4)); /* webkit gradient background */
+}
+
+.gradientbuttons li a:hover{
+color: lightyellow;
+}
+
+.redtheme li a{
+font-size:18px;
+background: darkred;
+background: -moz-linear-gradient(center top, #f5795d, #e55e3f 25%, #d02700 45%, #e55e3f 85%, #f5795d);
+background: -webkit-gradient(linear, center top, center bottom, from(#f5795d), color-stop(25%, #e55e3f), color-stop(45%, #d02700), color-stop(85%, #e55e3f), to(#f5795d)); 
+}
+
+.greentheme li a{
+font-size:12px;
+background: green;
+background: -moz-linear-gradient(center top, #7ad690, #3ec05c 25%, #298a40 45%, #3ec05c 85%, #7ad690);
+background: -webkit-gradient(linear, center top, center bottom, from(#7ad690), color-stop(25%, #3ec05c), color-stop(45%, #298a40), color-stop(85%, #3ec05c), to(#7ad690)); 
+}
+
+.blacktheme li a{
+font-size:16px;
+background: black;
+background: -moz-linear-gradient(center top, #9f9f9f, #686868 25%, #2a2a2a 45%, #686868 85%, #9f9f9f);
+background: -webkit-gradient(linear, center top, center bottom, from(#9f9f9f), color-stop(25%, #686868), color-stop(45%, #2a2a2a), color-stop(85%, #686868), to(#9f9f9f)); 
+}
+
+.orangetheme li a{
+font-size:14px;
+background: #e55e3f;
+background: -moz-linear-gradient(center top, #ecad9a, #e5937c 25%, #cf4c2a 45%, #e5937c 85%, #ecad9a);
+background: -webkit-gradient(linear, center top, center bottom, from(#ecad9a), color-stop(25%, #e5937c), color-stop(45%, #cf4c2a), color-stop(85%, #e5937c), to(#ecad9a)); 
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<div id="framecontentLeft">
+<div class="innertube">
+<center>
+<h1>Nickleback
+Never Again</h1>
+<h3>this song was super important and significant as in the 2000's domestic violence was still an all up high, and they really pointed out
+that this issue needed to be adressed and helped. I really resepct them for coming out and speaking against such an approved act
+and saying how unhumane it is. this song is significant.</h3>
+</center>
+</div>
+</div>
+
+<div id="framecontentRight">
+<div class="innertube">
+
+<h3>Signifcant piece of literature would probably be Harry Potter. I really enjoyed this book as a kid and what was cool is as the novels progressed in the 
+series I grew up at the same time as the protagonist. Also she really opened up the window for a more magical style of fantasy books as it was first frowned upon at the beginning
+of her releases.</h3>
+
+</div>
+</div>
+
+
+<div id="maincontent">
+<div class="innertube">
+<center>
+<div id="maincontent">
+<div class="gradientbuttons">
+<ul>
+<li><a href="popculture.htm"> Pop Culture</a></li>
+<li><a href="timecapsule.htm"> Time Capsule</a></li>
+<h1>Significant Arts</h1>
+<p><h3> With the progression in technology the production of the fine arts has made a great improvement of quality in the movie buissness and easier spread of literature. Movies have moved forth to be able to further expand the ideas and imagination
+with visual technuiges now available due to computer editing softwares.</h3>
+
+<br><br>
+<h1>Avatar </h1>
+<h3>Avatar is the highest grossing movie and is the greatest example of what movies have potential of doing now. This movie is the perfect example of a director who took full potential of the techonology available today as he made and generated
+a whole race of people that seemed real that interacted with real people at the same time. The movie ris very similiar to the colonization of North America and the Native Americans.<br>
+<img src="avatar.jpg" alt=""></h3>
+</p>
+<p style="text-align: center"></a></p>
+</center>
+
+</div>
+</div>
+
+
+</body>
+</html>
+

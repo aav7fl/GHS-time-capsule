@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Fixed Width CSS Layouts - 1 Column - fw-8-1-col</title>
+<link rel="stylesheet" type="text/css" href="main.css" />
+
+
+<script type="text/javascript">
+
+var firstreel=new reelslideshow({
+	wrapperid: "myreel", //ID of blank DIV on page to house Slideshow
+	dimensions: [300, 200], //width/height of gallery in pixels. Should reflect dimensions of largest image
+	imagearray: [
+		["http://i26.tinypic.com/11l7ls0.jpg"], //["image_path", "optional_link", "optional_target"]
+		["http://i29.tinypic.com/xp3hns.jpg", "http://en.wikipedia.org/wiki/Cave", "_new"],
+		["http://i30.tinypic.com/531q3n.jpg"],
+		["http://i31.tinypic.com/119w28m.jpg"] //<--no trailing comma after very last image element!
+	],
+	displaymode: {type:'auto', pause:2000, cycles:2, pauseonmouseover:true},
+	orientation: "h", //Valid values: "h" or "v"
+	persist: true, //remember last viewed slide and recall within same session?
+	slideduration: 300 //transition duration (milliseconds)
+})
+
+</script>
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+
+         <div id="header">
+		 
+	<img src="newken.png" alt=""> 
+			   
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Content -->
+		 <div id="content">
+		       <center>     
+					 
+<li> I enjoy <font color="#ff33ff">music</font>, <b>food</b>, and <i>cheerleading</i>. 
+<li><font color="#339900">Starbucks</font> is my <u>obsession.</u> Iced chai lattes.
+<li>Im a varsity competitive cheerleader at <b><font color="#990000">Grandville High School.</font></b>
+<li>Division 1 <i>State Champs 2011.</i> 
+<li><b>Nicki Minaj, Drake, One Direction, Luke Bryan, Hunter Hayes, Ellie Goulding, and Mac Miller.</b>
+<li><font color="#0000cc"> University of Kentucky</font> or the <font color="#ff0000">University of Louisville. </font>
+<li>Jersey Shore, Storage Wars, and Dance Moms. 
+<li>Dirty Dancing,<b><font color="#000000">The Hunger Games</font></b>, and Burlesque.
+<li> <font color="#990099">The Hunger Games. Team Peeta <3 </font>  
+		</center>		
+				
+				<hr size="8" color="blue">		
+						
+						
+							
+		 
+		 
+	<center>	 <script language="JavaScript1.2">
+
+/*
+Up down slideshow Script
+By Dynamic Drive (www.dynamicdrive.com)
+For full source code, terms of use, and 100's more scripts, visit http://www.dynamicdrive.com
+*/
+
+///////configure the below four variables to change the style of the slider///////
+//set the scrollerwidth and scrollerheight to the width/height of the LARGEST image in your slideshow!
+var scrollerwidth='600px'
+var scrollerheight='400px'
+//3000 miliseconds=3 seconds
+var pausebetweenimages=2000
+
+//configure the below variable to change the images used in the slideshow. If you wish the images to be clickable, simply wrap the images with the appropriate <a> tag
+var slideimages=new Array()
+slideimages[0]='<img src="UofK.jpg" alt="">'
+slideimages[1]='<img src="hs.jpg">'
+slideimages[2]='<img src="hg.jpg">'
+slideimages[3]='<img src="chai.jpg">'
+slideimages[4]='<img src="nicki14.png">'
+slideimages[5]='<img src="ellie.jpg">'
+slideimages[6]='<img src="hunterhayes.jpg">'
+
+//extend this list
+
+///////Do not edit pass this line///////////////////////
+
+var ie=document.all
+var dom=document.getElementById
+
+if (slideimages.length>2)
+i=2
+else
+i=0
+
+function move1(whichlayer){
+tlayer=eval(whichlayer)
+if (tlayer.top>0&&tlayer.top<=5){
+tlayer.top=0
+setTimeout("move1(tlayer)",pausebetweenimages)
+setTimeout("move2(document.main.document.second)",pausebetweenimages)
+return
+}
+if (tlayer.top>=tlayer.document.height*-1){
+tlayer.top-=5
+setTimeout("move1(tlayer)",50)
+}
+else{
+tlayer.top=parseInt(scrollerheight)
+tlayer.document.write(slideimages[i])
+tlayer.document.close()
+if (i==slideimages.length-1)
+i=0
+else
+i++
+}
+}
+
+function move2(whichlayer){
+tlayer2=eval(whichlayer)
+if (tlayer2.top>0&&tlayer2.top<=5){
+tlayer2.top=0
+setTimeout("move2(tlayer2)",pausebetweenimages)
+setTimeout("move1(document.main.document.first)",pausebetweenimages)
+return
+}
+if (tlayer2.top>=tlayer2.document.height*-1){
+tlayer2.top-=5
+setTimeout("move2(tlayer2)",50)
+}
+else{
+tlayer2.top=parseInt(scrollerheight)
+tlayer2.document.write(slideimages[i])
+tlayer2.document.close()
+if (i==slideimages.length-1)
+i=0
+else
+i++
+}
+}
+
+function move3(whichdiv){
+tdiv=eval(whichdiv)
+if (parseInt(tdiv.style.top)>0&&parseInt(tdiv.style.top)<=5){
+tdiv.style.top=0+"px"
+setTimeout("move3(tdiv)",pausebetweenimages)
+setTimeout("move4(second2_obj)",pausebetweenimages)
+return
+}
+if (parseInt(tdiv.style.top)>=tdiv.offsetHeight*-1){
+tdiv.style.top=parseInt(tdiv.style.top)-5+"px"
+setTimeout("move3(tdiv)",50)
+}
+else{
+tdiv.style.top=scrollerheight
+tdiv.innerHTML=slideimages[i]
+if (i==slideimages.length-1)
+i=0
+else
+i++
+}
+}
+
+function move4(whichdiv){
+tdiv2=eval(whichdiv)
+if (parseInt(tdiv2.style.top)>0&&parseInt(tdiv2.style.top)<=5){
+tdiv2.style.top=0+"px"
+setTimeout("move4(tdiv2)",pausebetweenimages)
+setTimeout("move3(first2_obj)",pausebetweenimages)
+return
+}
+if (parseInt(tdiv2.style.top)>=tdiv2.offsetHeight*-1){
+tdiv2.style.top=parseInt(tdiv2.style.top)-5+"px"
+setTimeout("move4(second2_obj)",50)
+}
+else{
+tdiv2.style.top=scrollerheight
+tdiv2.innerHTML=slideimages[i]
+if (i==slideimages.length-1)
+i=0
+else
+i++
+}
+}
+
+function startscroll(){
+if (ie||dom){
+first2_obj=ie? first2 : document.getElementById("first2")
+second2_obj=ie? second2 : document.getElementById("second2")
+move3(first2_obj)
+second2_obj.style.top=scrollerheight
+second2_obj.style.visibility='visible'
+}
+else if (document.layers){
+document.main.visibility='show'
+move1(document.main.document.first)
+document.main.document.second.top=parseInt(scrollerheight)+5
+document.main.document.second.visibility='show'
+}
+}
+
+window.onload=startscroll
+
+</script>
+
+
+<ilayer id="main" width=&{scrollerwidth}; height=&{scrollerheight}; visibility=hide>
+<layer id="first" left=0 top=1 width=&{scrollerwidth};>
+<script language="JavaScript1.2">
+if (document.layers)
+document.write(slideimages[0])
+</script>
+</layer>
+<layer id="second" left=0 top=0 width=&{scrollerwidth}; visibility=hide>
+<script language="JavaScript1.2">
+if (document.layers)
+document.write(slideimages[dyndetermine=(slideimages.length==1)? 0 : 1])
+</script>
+</layer>
+</ilayer>
+
+<script language="JavaScript1.2">
+if (ie||dom){
+document.writeln('<div id="main2" style="position:relative;width:'+scrollerwidth+';height:'+scrollerheight+';overflow:hidden;">')
+document.writeln('<div style="position:absolute;width:'+scrollerwidth+';height:'+scrollerheight+';clip:rect(0 '+scrollerwidth+' '+scrollerheight+' 0);left:0px;top:0px">')
+document.writeln('<div id="first2" style="position:absolute;width:'+scrollerwidth+';left:0px;top:1px;">')
+document.write(slideimages[0])
+document.writeln('</div>')
+document.writeln('<div id="second2" style="position:absolute;width:'+scrollerwidth+';left:0px;top:0px;visibility:hidden">')
+document.write(slideimages[dyndetermine=(slideimages.length==1)? 0 : 1])
+document.writeln('</div>')
+document.writeln('</div>')
+document.writeln('</div>')
+}
+</script></center>
+		 
+	<hr size="8" color="blue">		
+						
+	
+	
+	<center> <td> 
+<a href="aboutme.html"><img src="button1.png" alt=""> </a>
+<td> <a href="http://www.youtube.com/watch?v=JRRKjbXH0aI&safety_mode=true&persist_safety_mode=1&safe=active"><img src="button2.png" alt=""></a>
+<a href="http://ghsdawgs.com/students/kwestcott/Historical%20Event.htm"><img src="button3.png" alt=""> </a>
+<a href="http://kennedywestcott2.edu.glogster.com/kennedy/"><img src="button4.png" alt=""> </a>
+<a href="http://ghsdawgs.com/causes/KONY/cause.html"><img src="konybutton.png" alt=""></a>
+<a href="http://www.ghsdawgs.com/music/kennedysmusic/kwestcottmusic.html"><img src="musicilike.png" alt=""></a>
+<a href="http://ghsdawgs.com/vault/timecapsulespring12/kwestcott/timecapsule.html"><img src="time.png" alt=""></a>
+<td>	</center> 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 <!-- Begin Content -->
+
+		 
+   </div>
+   <!-- End Wrapper -->
+   
+</body>
+</html>

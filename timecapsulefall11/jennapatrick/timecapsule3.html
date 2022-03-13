@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+<title>Trending</title>
+<style type="text/css">
+
+body{ background-image: url(complex-repeating-patterns--1-1.jpg); }
+margin:0;
+padding:0;
+line-height: 1.5em;
+}
+
+b{font-size: 110%;}
+em{color: red;}
+
+#maincontainer{
+
+width: 840px; /*Width of main container*/
+margin: 0 auto; /*Center container on page*/
+}
+
+#topsection{
+margin: 0 auto;
+background: #000;
+height: 90px; /*Height of top section*/
+width: 470px;
+color: #1E90FF;
+}
+
+#topsection h1{
+margin: 0;
+padding-top: 15px;
+background: #000;
+}
+
+#contentwrapper{
+
+width: 100%;
+}
+
+#contentcolumn{
+margin: 0 190px 0 180px; /*Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth*/
+width: 470px;
+background: #000;
+color: #1E90FF;
+}
+
+
+
+
+#footer{
+clear: left;
+width: 100%;
+background: black;
+color: #FFF;
+text-align: center;
+padding: 4px 0;
+}
+
+#footer a{
+color: #FFFF80;
+}
+
+.innertube{
+margin: 10px; /*Margins for inner DIV inside each column (to provide padding)*/
+margin-top: 0;
+}
+
+</style>
+
+
+
+</head>
+<body>
+<div id="maincontainer">
+
+<div id="topsection" >
+<div class="innertube" align="center"><h1>Trending</h1></div>
+</div>
+
+<div id="contentwrapper" align="center">
+<div id="contentcolumn">
+You're a pretty happy person for the most part. Sure you have your down days, but who doesn't? You have great friends, you have a great family, and you have a great life. You're a happy person, because you know you deserve to be. You are a young, wild and free teenager. You're definiton of freedom is being young. You're trying hard in school, you're in a AP Literature class, and it is kicking your butt. You had to read two books, "The Thing's They Carried" by Tim O'brien and "A Million Miles in a Thousand Years" by Donald Miller. You just got the new Skyward Sword Legend of Zelda game and you are OBSESSED. 
+<br>
+<table>
+<tr>
+<ul>
+<li><a href="http://www.ghsdawgs.com/vault/timecapsulefall11/jennapatrick/timecapsule.html">Home</a></li>
+<li><a href="http://www.ghsdawgs.com/vault/timecapsulefall11/jennapatrick/timecapsule2.html">Trending</a></li>
+</ul>
+</tr>
+</table>
+
+<a href="http://ghsdawgs.com/"></a>
+
+
+<div class="innertube">
+<script type="text/javascript">
+/***********************************************
+* Conveyor belt slideshow script- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+
+//Specify the slider's width (in pixels)
+var sliderwidth="300px"
+//Specify the slider's height
+var sliderheight="300px"
+//Specify the slider's slide speed (larger is faster 1-10)
+var slidespeed=3
+//configure background color:
+slidebgcolor="#000"
+
+//Specify the slider's images
+var leftrightslide=new Array()
+var finalslide=''
+leftrightslide[0]='<img src="Twitter-Logo-300x293.jpg" border=1>'
+leftrightslide[1]='<img src="facebook-icon.png" border=1>'
+leftrightslide[2]='<img src="android_logo.gif" border=1>'
+leftrightslide[3]='<img src="Chrome-logo-2011-03-16.jpg" border=1>'
+leftrightslide[4]='<img src="icon_tumblr.png" border=1>'
+leftrightslide[5]='<img src="youtube_logo.png" border=1>'
+
+//Specify gap between each image (use HTML):
+var imagegap=" "
+
+//Specify pixels gap between each slideshow rotation (use integer):
+var slideshowgap=5
+
+
+////NO NEED TO EDIT BELOW THIS LINE////////////
+
+var copyspeed=slidespeed
+leftrightslide='<nobr>'+leftrightslide.join(imagegap)+'</nobr>'
+var iedom=document.all||document.getElementById
+if (iedom)
+document.write('<span id="temp" style="visibility:hidden;position:absolute;top:-100px;left:-9000px">'+leftrightslide+'</span>')
+var actualwidth=''
+var cross_slide, ns_slide
+
+function fillup(){
+if (iedom){
+cross_slide=document.getElementById? document.getElementById("test2") : document.all.test2
+cross_slide2=document.getElementById? document.getElementById("test3") : document.all.test3
+cross_slide.innerHTML=cross_slide2.innerHTML=leftrightslide
+actualwidth=document.all? cross_slide.offsetWidth : document.getElementById("temp").offsetWidth
+cross_slide2.style.left=actualwidth+slideshowgap+"px"
+}
+else if (document.layers){
+ns_slide=document.ns_slidemenu.document.ns_slidemenu2
+ns_slide2=document.ns_slidemenu.document.ns_slidemenu3
+ns_slide.document.write(leftrightslide)
+ns_slide.document.close()
+actualwidth=ns_slide.document.width
+ns_slide2.left=actualwidth+slideshowgap
+ns_slide2.document.write(leftrightslide)
+ns_slide2.document.close()
+}
+lefttime=setInterval("slideleft()",30)
+}
+window.onload=fillup
+
+function slideleft(){
+if (iedom){
+if (parseInt(cross_slide.style.left)>(actualwidth*(-1)+8))
+cross_slide.style.left=parseInt(cross_slide.style.left)-copyspeed+"px"
+else
+cross_slide.style.left=parseInt(cross_slide2.style.left)+actualwidth+slideshowgap+"px"
+
+if (parseInt(cross_slide2.style.left)>(actualwidth*(-1)+8))
+cross_slide2.style.left=parseInt(cross_slide2.style.left)-copyspeed+"px"
+else
+cross_slide2.style.left=parseInt(cross_slide.style.left)+actualwidth+slideshowgap+"px"
+
+}
+else if (document.layers){
+if (ns_slide.left>(actualwidth*(-1)+8))
+ns_slide.left-=copyspeed
+else
+ns_slide.left=ns_slide2.left+actualwidth+slideshowgap
+
+if (ns_slide2.left>(actualwidth*(-1)+8))
+ns_slide2.left-=copyspeed
+else
+ns_slide2.left=ns_slide.left+actualwidth+slideshowgap
+}
+}
+
+
+if (iedom||document.layers){
+with (document){
+document.write('<table border="0" cellspacing="0" cellpadding="0"><td>')
+if (iedom){
+write('<div style="position:relative;width:'+sliderwidth+';height:'+sliderheight+';overflow:hidden">')
+write('<div style="position:absolute;width:'+sliderwidth+';height:'+sliderheight+';background-color:'+slidebgcolor+'" onMouseover="copyspeed=0" onMouseout="copyspeed=slidespeed">')
+write('<div id="test2" style="position:absolute;left:0px;top:0px"></div>')
+write('<div id="test3" style="position:absolute;left:-1000px;top:0px"></div>')
+write('</div></div>')
+}
+else if (document.layers){
+write('<ilayer width='+sliderwidth+' height='+sliderheight+' name="ns_slidemenu" bgColor='+slidebgcolor+'>')
+write('<layer name="ns_slidemenu2" left=0 top=0 onMouseover="copyspeed=0" onMouseout="copyspeed=slidespeed"></layer>')
+write('<layer name="ns_slidemenu3" left=0 top=0 onMouseover="copyspeed=0" onMouseout="copyspeed=slidespeed"></layer>')
+write('</ilayer>')
+}
+document.write('</td></table>')
+}
+}
+</script>
+
+ </div>
+</div>
+</div>
+
+
+
+</div>
+
+
+
+</div>
+</body>
+</html>

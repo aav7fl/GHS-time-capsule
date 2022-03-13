@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+<head>
+<center><img src="TC.png"></center>
+<center>
+<table border="0" cellpadding="0" cellspacing="0" summary="">
+<tr>
+<td><img src="mecoo.jpg"></td>
+<td><img src="mepedro.jpg"></td>
+</tr>
+</center>
+<title>Time Capsule</title>
+
+
+
+
+<center>
+
+
+<script type="text/javascript">
+// Script Author: ricocheting.com
+// Description: slideshow that allows visitors to flip through a series of images on your website
+
+var x=0;
+
+function rotate(num){
+fs=document.ff.slide;
+x=num%fs.length;
+if(x<0) x=fs.length-1;
+document.images.show.src=fs.options[x].value;
+fs.selectedIndex=x;}
+
+function auto() {
+if(document.ff.fa.value == "Stop"){
+rotate(++x);setTimeout("auto()", 5000);}}
+</script>
+
+<form name="ff">
+<table cellpadding="3" style="border:1px black solid;border-collapse:collapse;">
+<tr><th align=center>Time Capsule</th></tr>
+
+<tr><td align=center>
+<img src="http://mystuffspace.com/graphic/bob-marley.jpg" name="show">
+</td></tr>
+
+<tr><td align=center style="border:1px black solid;">
+<select name="slide" onChange="rotate(this.selectedIndex);">
+<option value="bobmarley4.jpg">Bob Marley has the most relaxing music.</option>
+<option value="powpow.jpg">Burton Bullet gets my flying down the slopes, i love this board.</option>
+<option value="metruckcoo3.jpg">Good old 1995 Ford f150, gets me A to B and anywhere else i want to go with the 4 wheel drive.</option>
+<option value="PCB1.jpg">Panama City Beach was a crazy time for spring break. Ups and downs, mostly ups.</option>
+<option value="girlsgirls.jpg">Girls are fun, especially the sexy ones.</option>
+<option value="ghav.jpg">Grand Haven Beach is always a great time when the weather is nice, beach babes!</option>
+<option value="bonfire.jpg">Bonfires, the chillest best times happen around the fire.</option>
+<option value="http://www.lawbuzz.com/movies/blow/images/blow.jpg">Blow is my favorite movie, i have watched it a million times.</option>
+<option value="http://4.bp.blogspot.com/_X1IWXuEbgXI/S5MwAfCpASI/AAAAAAAACOk/XhHpjGlo8jo/S1600-R/halo+reach+news+logo.jpg">Halo is my favorite video game all versions on Xbox 360.</option>
+<option value="gunrue.jpg">Grand Rapids, Born and Raised, i love this city.</option>
+</select>
+</td></tr>
+
+<tr><td align=center style="border:1px black solid;">
+<input type=button onclick="rotate(0);" value="ll&lt;&lt;" title="Jump to beginning">
+<input type=button onclick="rotate(x-1);" value="&lt;&lt;" title="Last Picture">
+<input type=button name="fa" onClick="this.value=((this.value=='Stop')?'Start':'Stop');auto();" value="Start" title="Autoplay" style="width:75px;">
+<input type=button onclick="rotate(x+1);" value="&gt;&gt;" title="Next Picture">
+<input type=button onclick="rotate(this.form.slide.length-1);" value="&gt;&gt;ll" title="Jump to end">
+</td></tr></table></form>
+
+
+
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

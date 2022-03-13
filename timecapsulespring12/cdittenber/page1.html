@@ -1,0 +1,146 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Movie, Song, & Pop Culture</title>
+<link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+         <div id="header">
+		 
+		       <center><img alt="Page1 (37K)" src="Page1.png" height="55" width="717" /></center>
+			   
+		 </div>
+		 <!-- End Header -->
+		 
+		 
+		 
+		 
+		 <!-- Begin Left Column -->
+		 <div id="leftcolumn">
+		 
+		       <div id="coolmenu">
+<a href="page1.html" onMouseover="showtext('JavaScript tutorials and scripts!')" onMouseout="hidetext()">Movie, Song, & Pop Culture</a>
+<a href="page2.html" onMouseover="showtext('300+ free JavaScripts')" onMouseout="hidetext()">Happiness, Freedom, & Quote</a>
+<a href="page3.html" onMouseover="showtext('Comprehensive JavaScript Reference')" onMouseout="hidetext()">Letter, Technology, & Literature</a>
+<div id="tabledescription"></div>
+</div>
+
+		 
+		 </div>
+		 <!-- End Left Column -->
+		 
+		 
+		 
+		 
+		 
+		 <!-- Begin Right Column -->
+		 <div id="rightcolumn">
+	
+	         <center><script type="text/javascript">
+
+var ultimateshow=new Array()
+
+//ultimateshow[x]=["path to image", "OPTIONAL link for image", "OPTIONAL link target"]
+
+ultimateshow[0]=['youngmoney_pic20.jpg']
+ultimateshow[1]=['weareyoungmoney-450x450.jpg']
+ultimateshow[2]=['transformers_3_dark_of_the_moon.jpg']
+ultimateshow[3]=['Transformers-313.jpg']
+ultimateshow[4]=['YoungMoney.jpg']
+ultimateshow[5]=['transformers-3.jpg']
+
+
+//configure the below 3 variables to set the dimension/background color of the slideshow
+
+var slidewidth="300px" //set to width of LARGEST image in your slideshow
+var slideheight="300px" //set to height of LARGEST iamge in your slideshow
+var slidecycles="3" //number of cycles before slideshow stops (ie: "2" or "continous")
+var randomorder="yes" //randomize the order in which images are displayed? "yes" or "no"
+var preloadimages="yes" //preload images? "yes" or "no"
+var slidebgcolor='white'
+
+//configure the below variable to determine the delay between image rotations (in miliseconds)
+var slidedelay=3000
+
+////Do not edit pass this line////////////////
+
+var ie=document.all
+var dom=document.getElementById
+var curcycle=0
+
+if (preloadimages=="yes"){
+for (i=0;i<ultimateshow.length;i++){
+var cacheimage=new Image()
+cacheimage.src=ultimateshow[i][0]
+}
+}
+
+var currentslide=0
+
+function randomize(targetarray){
+ultimateshowCopy=new Array()
+var the_one
+var z=0
+while (z<targetarray.length){
+the_one=Math.floor(Math.random()*targetarray.length)
+if (targetarray[the_one]!="_selected!"){
+ultimateshowCopy[z]=targetarray[the_one]
+targetarray[the_one]="_selected!"
+z++
+}
+}
+}
+
+if (randomorder=="yes")
+randomize(ultimateshow)
+else
+ultimateshowCopy=ultimateshow
+
+function rotateimages(){
+curcycle=(currentslide==0)? curcycle+1 : curcycle
+ultcontainer='<center>'
+if (ultimateshowCopy[currentslide][1]!="")
+ultcontainer+='<a href="'+ultimateshowCopy[currentslide][1]+'" target="'+ultimateshowCopy[currentslide][2]+'">'
+ultcontainer+='<img src="'+ultimateshowCopy[currentslide][0]+'" border="0">'
+if (ultimateshowCopy[currentslide][1]!="")
+ultcontainer+='</a>'
+ultcontainer+='</center>'
+if (ie||dom)
+crossrotateobj.innerHTML=ultcontainer
+if (currentslide==ultimateshow.length-1) currentslide=0
+else currentslide++
+if (curcycle==parseInt(slidecycles) && currentslide==0)
+return
+setTimeout("rotateimages()",slidedelay)
+}
+
+if (ie||dom)
+document.write('<div id="slidedom" style="width:'+slidewidth+';height:'+slideheight+'; background-color:'+slidebgcolor+'"></div>')
+
+function start_slider(){
+crossrotateobj=dom? document.getElementById("slidedom") : document.all.slidedom
+rotateimages()
+}
+
+if (ie||dom)
+window.onload=start_slider
+
+</script></center>
+	       My favorite movie of would have to be Transformers directed by Michael Bay. I don't quite have a favorite song but I have a 
+favorite rap group called YMCMB aka Young Money Cash Money Billionaires. The best 5 pieces of pop culture of these current 
+years I believe is the Watch the Throne album by Jay-Z & Kanye West, the Honey Badger video, The Hunger Games movie, Battlefield 3, and Call of Duty: Modern Warfare 3.
+		 <!-- End Right Column -->
+		 
+   </div>
+   <!-- End Wrapper -->
+   
+</body>
+</html>

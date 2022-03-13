@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Save</title>
+<style type="text/css">
+<!--
+<strong>#container
+{
+width: 90%;
+margin: 10px auto;
+background-color: blue;
+color: #333;
+border: 1px solid blue;
+line-height: 130%;
+}
+#top
+{
+padding: .5em;
+background-color: black;
+border-bottom: 3px solid white;
+}
+#top h1
+{
+padding: 0;
+margin: 0;
+}
+
+#leftnav
+{
+float: left;
+width: 170px;
+margin: 0;
+padding: 1em;
+background-color: blue;
+}
+
+#rightnav
+{
+float: right;
+width: 170px;
+margin: 0;
+padding: 1em;
+background-color: blue;
+}
+
+#content
+{
+margin-left: 200px;
+border-left: 3px solid white;
+margin-right: 200px;
+border-right: 3px solid white;
+padding: 1em;
+background-color: blue;
+}
+
+#footer
+{
+clear: both;
+margin: 0;
+padding: .5em;
+color: white;
+background-color: black;
+border-top: 3px solid white;
+}
+
+#leftnav p, #rightnav p { margin: 0 0 1em 0; }
+#content h2 { margin: 0 0 .5em 0; }</strong>
+#content { max-width: 36em; }
+
+
+
+
+.sidebarmenu ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
+font: bold 13px Verdana;
+width: 180px; /* Main Menu Item widths */
+border-bottom: 1px solid #ccc;
+}
+ 
+.sidebarmenu ul li{
+position: relative;
+}
+
+/* Top level menu links style */
+.sidebarmenu ul li a{
+display: block;
+overflow: auto; /*force hasLayout in IE7 */
+color: white;
+text-decoration: none;
+padding: 6px;
+border-bottom: 1px solid #778;
+border-right: 1px solid #778;
+}
+
+.sidebarmenu ul li a:link, .sidebarmenu ul li a:visited, .sidebarmenu ul li a:active{
+background-color: #012D58; /*background of tabs (default state)*/
+}
+
+.sidebarmenu ul li a:visited{
+color: white;
+}
+
+.sidebarmenu ul li a:hover{
+background-color: black;
+}
+
+/*Sub level menu items */
+.sidebarmenu ul li ul{
+position: absolute;
+width: 170px; /*Sub Menu Items width */
+top: 0;
+visibility: hidden;
+}
+
+.sidebarmenu a.subfolderstyle{
+background: url(right.gif) no-repeat 97% 50%;
+}
+
+ 
+/* Holly Hack for IE \*/
+* html .sidebarmenu ul li { float: left; height: 1%; }
+* html .sidebarmenu ul li a { height: 1%; }
+/* End */
+
+<script type="text/javascript">
+
+//Nested Side Bar Menu (Mar 20th, 09)
+//By Dynamic Drive: http://www.dynamicdrive.com/style/
+
+var menuids=["sidebarmenu1"] //Enter id(s) of each Side Bar Menu's main UL, separated by commas
+
+function initsidebarmenu(){
+for (var i=0; i<menuids.length; i++){
+  var ultags=document.getElementById(menuids[i]).getElementsByTagName("ul")
+    for (var t=0; t<ultags.length; t++){
+    ultags[t].parentNode.getElementsByTagName("a")[0].className+=" subfolderstyle"
+  if (ultags[t].parentNode.parentNode.id==menuids[i]) //if this is a first level submenu
+   ultags[t].style.left=ultags[t].parentNode.offsetWidth+"px" //dynamically position first level submenus to be width of main menu item
+  else //else if this is a sub level submenu (ul)
+    ultags[t].style.left=ultags[t-1].getElementsByTagName("a")[0].offsetWidth+"px" //position menu to the right of menu item that activated it
+    ultags[t].parentNode.onmouseover=function(){
+    this.getElementsByTagName("ul")[0].style.display="block"
+    }
+    ultags[t].parentNode.onmouseout=function(){
+    this.getElementsByTagName("ul")[0].style.display="none"
+    }
+    }
+  for (var t=ultags.length-1; t>-1; t--){ //loop through all sub menus again, and use "display:none" to hide menus (to prevent possible page scrollbars
+  ultags[t].style.visibility="visible"
+  ultags[t].style.display="none"
+  }
+  }
+}
+
+if (window.addEventListener)
+window.addEventListener("load", initsidebarmenu, false)
+else if (window.attachEvent)
+window.attachEvent("onload", initsidebarmenu)
+
+</script>
+
+
+
+
+-->
+
+</style>
+</head>
+<body background="blue" text="white">
+<div id="container">
+<div id="top">
+<center>
+<img src="Penguin2.png">
+</center>
+</div>
+<div id="leftnav">
+
+<img src="penguin1.jpg" width="160" height="300">
+
+</div>
+<div id="rightnav">
+<h2>Links</h2>
+
+
+<div class="sidebarmenu">
+<ul id="sidebarmenu1">
+<li><a href="http://www.auburn.edu/~cgs0013/ETK/SaveThePenguinsETK.pdf">University of Virginia</a></li>
+<li><a href="http://www.thepenguinlady.com/Donation_list.html">The Penguin Lady</a></li>
+<li><a href="http://www.wcs.org/saving-wildlife/birds/magellanic-penguin.aspx">Wildlife Conservation Society</a></li>
+<li><a href="http://www.seabirds.org/">Seabirds</a></li>
+<li><a href="http://worldwildlife.org/species/penguin">World Wildlife</a></li>
+<li><a href="http://www.penguin.com/">The Penguin Group</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Penguin">Wikipedia</a></li>
+<li><a href="http://www.youtube.com/watch?v=rGEqWzw8A9g">Happiest Penguin Ever</a></li>
+</ul>
+</div>
+
+
+</p>
+</div>
+<div id="content">
+<h2>The Penguin</h2>
+<p>
+There are 17 species of penguins in the world, and 11 are in danger of becoming extinct. There are also only a few thousand left of the yellow-eyed and fiordland penguins which live south of Australia. Penguins are dying off because of pollution, overfishing, coastal development, and climate changes.Penguins are native to the southern hemisphere. They live in Antarctica and off the coasts of Australia, New Zealand, South Africa, and South America, with some as far north as the Galapagos Islands, which are part of Ecuador. The penguins have limited territory and rely on fishing near their nests. They depend on specific fish such as anchovies and sardines.Live penguins can be an economic resource, since they attract tourists. But if not properly managed, tourism can threaten the survival of the penguins. Tourists step on the eggs and interrupt breeding. Tour boats also pose the danger of oil spills. Fishing is a problem because the oceans are unmanaged common property. The remedy is to limit the fishing to a sustainable level and then auction off the rights to fish. The payment for fishing permits would be a type of rent for the use of the fishing water. Killing penguins and other endangered wildlife should be penalized as well, and non-native predators need to be controlled.
+ 
+</p>
+</div>
+<div id="footer">
+<center>
+<hr>
+Copyright 1998 by Fred E. Foldvary. All rights reserved.
+</center>
+</div>
+</div>
+</body>
+</html>
+
+
+

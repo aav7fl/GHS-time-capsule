@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title> Fixed Width CSS Layouts - 2 Column - fw-14-2-col</title>
+<link rel="stylesheet" type="text/css" href="main2.css" />
+</head>
+
+<body>
+
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+
+         <div id="header">
+		 
+		       <center><img src="popbanner.png" alt=""></center>		 
+			   
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Left Column -->
+		 <div id="leftcolumn">
+		<font color="#ffffff">
+		<center><img src="popcbanner.png" width="200"></center>
+		<hr>
+		<li>iPhone 4s
+		<li>XBox 360
+		<li>Call Of Duty:Modern Warfare 3
+		<li>Snapback Hats
+		<li>Jersey Shore
+		
+		
+		<br>
+		<center><img src="topbanner.png" width="200"></center>
+		<hr>
+		<li>Wiz Khalifa
+		<li>Mac Miller
+		<li>Lil Wayne
+		<li>Drake
+		<li>Tyga
+		
+		
+		
+		
+		</font>
+		 </div>
+		 <!-- End Left Column -->
+		 
+		 <!-- Begin Right Column -->
+
+		 <div id="rightcolumn">
+		      <script language="JavaScript1.2">
+
+/***********************************************
+* Flexi Slideshow- © Dynamic Drive (www.dynamicdrive.com)
+* This notice must stay intact for use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var variableslide=new Array()
+
+//variableslide[x]=["path to image", "OPTIONAL link for image", "OPTIONAL text description (supports HTML tags)"]
+
+variableslide[0]=['call.jpg']
+variableslide[1]=['360.jpg']
+variableslide[2]=['whalers.jpg']
+variableslide[3]=['wiz.jpg']
+variableslide[4]=['mm4.jpg']
+variableslide[5]=['lil.jpeg']
+
+//configure the below 3 variables to set the dimension/background color of the slideshow
+
+var slidewidth='300px' //set to width of LARGEST image in your slideshow
+var slideheight='300px' //set to height of LARGEST iamge in your slideshow, plus any text description
+var slidebgcolor='#ffffff'
+
+//configure the below variable to determine the delay between image rotations (in miliseconds)
+var slidedelay=3000
+
+////Do not edit pass this line////////////////
+
+var ie=document.all
+var dom=document.getElementById
+
+for (i=0;i<variableslide.length;i++){
+var cacheimage=new Image()
+cacheimage.src=variableslide[i][0]
+}
+
+var currentslide=0
+
+function rotateimages(){
+contentcontainer='<center>'
+if (variableslide[currentslide][1]!="")
+contentcontainer+='<a href="'+variableslide[currentslide][1]+'">'
+contentcontainer+='<img src="'+variableslide[currentslide][0]+'" border="0" vspace="3">'
+if (variableslide[currentslide][1]!="")
+contentcontainer+='</a>'
+contentcontainer+='</center>'
+if (variableslide[currentslide][2]!="")
+contentcontainer+=variableslide[currentslide][2]
+
+if (document.layers){
+crossrotateobj.document.write(contentcontainer)
+crossrotateobj.document.close()
+}
+else if (ie||dom)
+crossrotateobj.innerHTML=contentcontainer
+if (currentslide==variableslide.length-1) currentslide=0
+else currentslide++
+setTimeout("rotateimages()",slidedelay)
+}
+
+if (ie||dom)
+document.write('<div id="slidedom" style="width:'+slidewidth+';height:'+slideheight+'; background-color:'+slidebgcolor+'"></div>')
+
+function start_slider(){
+crossrotateobj=dom? document.getElementById("slidedom") : ie? document.all.slidedom : document.slidensmain.document.slidenssub
+if (document.layers)
+document.slidensmain.visibility="show"
+rotateimages()
+}
+
+if (ie||dom)
+start_slider()
+else if (document.layers)
+window.onload=start_slider
+
+</script> 
+	         
+					 
+					 
+					 		 </div>
+		 <!-- End Right Column -->
+		 
+		 <!-- Begin Footer -->
+		 <div id="footer">
+
+<center><table border="2" cellpadding="8" cellspacing="5"></center>
+<tr>		       
+<td><a href="time.html"><img src="mainbutton.png" alt=""></a></td>
+<td><a href="http://ghsdawgs.com/index.html"><center><img src="ghshome.png" width="220"></a></td>
+<td><a href="tech.html"> <img src="techbutton.png" alt=""></a></td>	
+</tr>			    
+	     </div>
+		 <!-- End Footer -->
+
+   </div>
+   <!-- End Wrapper -->
+   
+</body>
+</html>

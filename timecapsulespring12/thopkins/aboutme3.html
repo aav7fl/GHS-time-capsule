@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script language="JavaScript">
+
+//Preloaded slideshow script- By Jason Moon
+//For this script and more
+//Visit http://www.dynamicdrive.com
+
+// PUT THE URL'S OF YOUR IMAGES INTO THIS ARRAY...
+var Slides = new Array('marines.jpg','truck.jpg','recon2.jpg','state.jpeg','boat.jpg');
+
+// DO NOT EDIT BELOW THIS LINE!
+function CacheImage(ImageSource) { // TURNS THE STRING INTO AN IMAGE OBJECT
+   var ImageObject = new Image();
+   ImageObject.src = ImageSource;
+   return ImageObject;
+}
+
+function ShowSlide(Direction) {
+   if (SlideReady) {
+      NextSlide = CurrentSlide + Direction;
+      // THIS WILL DISABLE THE BUTTONS (IE-ONLY)
+      document.SlideShow.Previous.disabled = (NextSlide == 0);
+      document.SlideShow.Next.disabled = (NextSlide == 
+(Slides.length-1));    
+ if ((NextSlide >= 0) && (NextSlide < Slides.length)) {
+            document.images['Screen'].src = Slides[NextSlide].src;
+            CurrentSlide = NextSlide++;
+            Message = 'Picture ' + (CurrentSlide+1) + ' of ' + 
+Slides.length;
+            self.defaultStatus = Message;
+            if (Direction == 1) CacheNextSlide();
+      }
+      return true;
+   }
+}
+
+function Download() {
+   if (Slides[NextSlide].complete) {
+      SlideReady = true;
+      self.defaultStatus = Message;
+   }
+   else setTimeout("Download()", 100); // CHECKS DOWNLOAD STATUS EVERY 100 MS
+   return true;
+}
+
+function CacheNextSlide() {
+   if ((NextSlide < Slides.length) && (typeof Slides[NextSlide] == 
+'string'))
+{ // ONLY CACHES THE IMAGES ONCE
+      SlideReady = false;
+      self.defaultStatus = 'Downloading next picture...';
+      Slides[NextSlide] = CacheImage(Slides[NextSlide]);
+      Download();
+   }
+   return true;
+}
+
+function StartSlideShow() {
+   CurrentSlide = -1;
+   Slides[0] = CacheImage(Slides[0]);
+   SlideReady = true;
+   ShowSlide(1);
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Travis' Homepage</title>
+<link rel="stylesheet" type="text/css" href="main3.css" />
+</head>
+
+<body onLoad="StartSlideShow()">
+
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+
+         <div id="header">
+		 
+		      <center><img src="homepage.png"></center>	 
+			   
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Navigation -->
+         <div id="navigation">
+		 
+<center>
+<table border="0" cellpadding="0" cellspacing="0" summary="">
+<tr>
+<td>
+<a href="aboutme.html"><img src="home.png" border="0" onmouseover="this.src='home1.png';" onmouseout="this.src='home.png';" />
+</td>
+<td>
+<a href="USMC.html"><img src="button.png" border="0" onmouseover="this.src='button1.png';" onmouseout="this.src='button.png';" />
+</td>
+<td>
+<a href="marine.html"><img src="timeline.png" border="0" onmouseover="this.src='timeline1.png';" onmouseout="this.src='timeline.png';" /></a>
+</td>
+<td> 
+<a href="http://usmc94.edu.glogster.com/usmc/"><img src="button10.png" border="0"></a>
+</td>
+<td>
+<a href="cause.html"><img src="wwp1.png" border="0"></a>
+</td>
+<td><a href="http://ghsdawgs.com/music/travis%27music/travis%27music.html"><img src="music1.png" border="0"></a>
+</td>
+<tr>
+</table>
+</center>
+			   
+		 </div>
+		 <!-- End Navigation -->
+		 
+		 <!-- Begin Left Column -->
+
+		 <div id="leftcolumn">
+		 
+		      I'm Travis and this is my homepage for my web design class.  I like to do anything related to the outdoors and I am a big Michigan State fan.  After high school I hope to be in the Marines and make a career of it.
+		 
+		 </div>
+		 <!-- End Left Column -->
+		 
+		 <!-- Begin Content Column -->
+		 <div id="content">
+		       
+	          <center><form name="SlideShow">
+<table>
+<tr>
+   <td colspan=2><img name="Screen" width=300 height=300></td>
+</tr>
+<tr>
+   <td><input type="button" name="Previous" 
+value=" << "
+onClick="ShowSlide(-1)"></td>
+   <td align="right"><input type="button" name="Next"
+value=" >> " onClick="ShowSlide(1)"></td>
+</table>
+</form></center>
+
+</div>
+<hr size="10" color="black">
+		 <!-- End Content Column -->
+
+		 
+		 <!-- Begin Right Column -->
+		 <div id="rightcolumn">
+		 
+		       Here is another webpage I made on the movie Act of Valor and a place to email me.
+					 <p><a href="actofvalor.html">Act of Valor</a>
+		 			 <p><a href="mailto:TravisHopkins@gpsbulldogs.org"><img src="mail.png" border="0"></a>
+		 			 <p><a href="http://ghsdawgs.com/vault/timecapsulespring12/thopkins/timecapsule.html"><img src="time.png" border="0"></a></p>
+		 </div>
+		 <!-- End Right Column -->
+		 
+		 <!-- Begin Footer -->
+		 <div id="footer">
+		       
+			   <center>
+<table border="1" cellpadding="6" cellspacing="0">
+<tr>
+<td><a href="http://www.google.com/">Google.com</a><br>
+<a href="http://www.uscav.com">USCAV.com</a><br>
+<a href="http://www.youtube.com">Youtube.com</a><br>
+<a href="http://www.specialforces.com">Specialforces.com</a><br>
+<a href="http://www.cheaperthandirt.com">Cheaperthandirt.com</a><br>
+</td>
+<td>
+<ul>
+<li>Full Metal Jacket
+<li>We Were Soldiers
+<li>Sands of Iwo Jima
+<li>Step Brothers
+<li>Role Models
+</ul>
+</td>
+<td>
+<ul>
+<li>Five Finger Death Punch
+<li>Bullet for My Valentine
+<li>Disturbed
+<li>Slipknot
+<li>Atreyu
+</ul>
+</td>
+<td>
+<ul>
+<li>Michigan State Spartans
+<li>Detroit Lions
+<li>Detroit Tigers
+<li>Detroit Red Wings
+<li>Applachian State
+</ul>
+</td>
+<td> "Americans never quit"-General Douglas Macarthur
+<br>"You have enemies?  Good.  That means you've stood up for something in your life."-Winston Churchill
+<br> "If your going through hell, keep going." -Winston Churchill</td>
+</tr>
+</table>	
+			    
+	     </div>
+		 <!-- End Footer -->
+
+		 
+   </div>
+   <!-- End Wrapper -->
+   
+</body>
+</html>

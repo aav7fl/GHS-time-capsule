@@ -1,0 +1,119 @@
+﻿V6.0
+unit_scale 1.000000000000 
+model_scale 0.016488587001 
+model_center 11.232281991997 12.791788680355 -23.375866601778 
+studio_center 0.038352195026 -0.007873483868 0.024901988929 
+camera_center 0.038352195026 -0.007873483868 -1.975098011071 
+room_center 0.000000000000 -0.000000000000 -0.000000000000 
+# light_name "default ambient"
+light_type ambient_light
+light_name "default ambient"
+light_state 1
+light_color 0.600000 0.600000 0.600000
+position 1.000000000000 1.000000000000 1.000000000000 
+aim_at 0.000000000000 0.000000000000 0.000000000000 
+locked_to studio
+spot_angle 45.000000
+spot_focus 90.000000
+casts_shadows 0
+soft_shadows 0
+shadows_hardness 0.000000
+scatter 0
+scatter_type none
+intensity 1.000000
+threshold 50.000000
+show_icon 0
+num_sky_samples 50
+light_units 0
+light_temperature 0
+noise_factor 0.000000
+hdrilight_imagepath 
+hdrilight_samples 0
+hdrilight_softness 0.000000
+hdrilight_saturation 0.000000
+hdrilight_rotation 0.000000
+hdrilight_envtype 0
+# light_name "default distant"
+light_type directional_light
+light_name "default distant"
+light_state 1
+light_color 0.700000 0.700000 0.700000
+position 0.173616579091 0.451403105638 -1.270810367816 
+aim_at 0.000000000000 0.000000000000 -2.000000000000 
+locked_to camera
+spot_angle 45.000000
+spot_focus 90.000000
+casts_shadows 1
+soft_shadows 0
+shadows_hardness 0.000000
+scatter 0
+scatter_type none
+intensity 1.000000
+threshold 50.000000
+show_icon 0
+num_sky_samples 50
+light_units 0
+light_temperature 0
+noise_factor 0.000000
+hdrilight_imagepath 
+hdrilight_samples 0
+hdrilight_softness 0.000000
+hdrilight_saturation 0.000000
+hdrilight_rotation 0.000000
+hdrilight_envtype 0
+# light_name "Environment"
+light_type hdri_light
+light_name "Environment"
+light_state 0
+light_color 1.000000 1.000000 1.000000
+position 0.000000000000 0.875000000000 0.000000000000 
+aim_at 0.000000000000 0.000000000000 0.000000000000 
+locked_to studio
+spot_angle 45.000000
+spot_focus 90.000000
+casts_shadows 0
+soft_shadows 1
+shadows_hardness 50.000000
+scatter 0
+scatter_type none
+intensity 1.000000
+threshold 50.000000
+show_icon 0
+num_sky_samples 50
+light_units 0
+light_temperature 0
+noise_factor 0.000000
+hdrilight_imagepath 
+hdrilight_samples 50
+hdrilight_softness 0.000000
+hdrilight_saturation 0.000000
+hdrilight_rotation 0.000000
+hdrilight_envtype 0
+# light_name "spot1"
+light_type spot_light
+light_name "spot1"
+light_state 1
+light_color 1.000000 1.000000 0.770000
+position 0.363524858806 0.654047867789 0.637787773973 
+aim_at 0.143772981813 0.289217081715 0.024901988926 
+locked_to studio
+spot_angle 45.000000
+spot_focus 22.500000
+casts_shadows 0
+soft_shadows 0
+shadows_hardness 0.000000
+scatter 0
+scatter_type none
+intensity 1.000000
+threshold 50.000000
+show_icon 0
+num_sky_samples 50
+light_units 0
+light_temperature 0
+noise_factor 0.000000
+hdrilight_imagepath 
+hdrilight_samples 0
+hdrilight_softness 0.000000
+hdrilight_saturation 0.000000
+hdrilight_rotation 0.000000
+hdrilight_envtype 0

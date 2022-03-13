@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Time Capsule fads</title>
+<style type="text/css">
+
+.buttonmenu{
+list-style-type: none;
+margin: 0;
+padding: 0;
+width: 180px;
+}
+
+.buttonmenu li a{
+color: white;
+display: block;
+width: 100%;
+padding: 2px 4px;
+text-decoration: none;
+font-weight: bold;
+border: 1px solid;
+border-color:#D5BFD0 #5A3A54 #5A3A54 #D5BFD0; /*light dark dark light*/
+background-color: #704968;
+text-decoration:none;
+}
+
+
+.buttonmenu li a:visited{
+color: white;
+}
+
+.buttonmenu li a:hover, .buttonmenu li a:active{
+color: black;
+
+}
+
+
+
+
+
+body{
+margin:10;
+padding:0;
+line-height: 1.5em;
+background-image: url(turtle3.jpg);
+}
+
+b{font-size: 110%;}
+em{color: red;}
+
+#maincontainer{
+width: 840px; /*Width of main container*/
+margin: 0 auto; /*Center container on page*/
+}
+
+#topsection{
+background: #99ffcc;
+height: 90px; /*Height of top section*/
+}
+
+#topsection h1{
+margin: 0;
+padding-top: 15px;
+}
+
+#contentwrapper{
+float: left;
+width: 100%;
+}
+
+#contentcolumn{
+margin: 0 190px 0 180px; /*Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth*/
+background-color: #99ffcc;
+height: 600px;
+color:white;
+padding: 15px;}
+
+#leftcolumn{
+float: left;
+width: 190px; /*Width of left column in pixel*/
+margin-left: -840px; /*Set margin to that of -(MainContainerWidth)*/
+background: #ccffcc;
+height: 600px;
+}
+
+#rightcolumn{
+float: left;
+width: 190px; /*Width of right column*/
+margin-left: -190px; /*Set left margin to -(RightColumnWidth)*/
+background: #ccffcc;
+height: 600px;
+}
+
+#footer{
+clear: left;
+width: 100%;
+background: black;
+color: #3366ff;
+text-align: center;
+padding: 4px 0;
+}
+
+#footer a{
+color: #FFFF80;
+}
+
+.innertube{
+margin: 12px; /*Margins for inner DIV inside each column (to provide padding)*/
+margin-top: 0px;
+width: 190px;
+}
+
+</style>
+
+
+
+</head>
+<body>
+<div id="maincontainer">
+
+<div id="topsection"><div class="innertube"><h1>Fads!</h1></div></div>
+<div id="contentwrapper">
+<div id="contentcolumn">
+<div class="innertube"> 
+<b> The fads!</b>
+<table border="0" cellpadding="0">
+  <caption><strong> Five top fads</strong></caption>
+  <tr>
+  </tr>
+  <tr>
+    <td width="100%"><form method="POST" name="rotater">
+      <div align="center"><center><p>
+
+<script language="JavaScript1.1">
+
+/*
+Photo Slider II- By Kevin Adams (kadams@kyk.net)
+For this script and more
+Visit http://www.javascriptkit.com
+*/
+
+var photos=new Array()
+var text=new Array()
+var which=0
+var what=0
+
+//Change the below variables to reference your own images. You may have as many images in the slider as you wish
+photos[1]="twitter-logo-jpeg2.jpg"
+photos[2]="vans15.JPG"
+photos[3]="key_art_call_of_duty_black_ops.jpg"
+photos[4]="the-hunger-games-logo.jpg"
+
+//change coresponding description
+text[1]="Twitter logo"
+text[2]="Vans"
+text[3]="Call of duty"
+text[4]="The hunger games"
+
+
+window.onload=new Function("document.rotater.description.value=text[0]")
+
+function backward(){
+if (which>0){
+window.status=''
+which--
+document.images.photoslider.src=photos[which];
+what--
+document.rotater.description.value=text[what];
+}
+}
+
+function forward(){
+if (which<photos.length-1){
+which++
+document.images.photoslider.src=photos[which]
+what++
+document.rotater.description.value=text[what];
+}
+else window.status='End of gallery'
+}
+
+function type()
+	{
+	alert("This textbox will only display default comments")
+	}
+
+
+</script>
+<p><input type=text name="description" style="width:400px" size=50>
+
+<p><input type="button" value="<<Back" name="B2"
+      onClick="backward()"> <input type="button" value="Next>>" name="B1"
+      onClick="forward()"><br />
+      <a href="#" onClick="which=1;what=1;backward();return false">Start Over</a></p>
+      </center></div>
+    </form>
+    </td>
+  </tr>
+</table>
+
+
+</div>
+</div>
+</div>
+
+<div id="leftcolumn">
+
+
+<ul class="buttonmenu">
+<li><a href="timecapsule.html">Letter to myself</a></li>
+<li><a href="http://ghsdawgs.com">Ghs Homepage</a></li>
+<li><a href="timecapsuletech.html">What techology will be in ten years</a></li>	
+</ul>
+
+
+
+</div>
+
+<div id="rightcolumn">
+<div class="innertube"><b>What freedom means</b> 
+Freedom, is...Is the right to do what you want, without being told that you can
+not do it. You are not a slave/servent to someone of a higher rank in life then
+you.
+</div>
+</div>
+
+<div id="footer">Check out my other time capsule pages</a></div>
+
+</div>
+</body>
+</html>
+

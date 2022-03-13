@@ -1,0 +1,114 @@
+/*
+      Created by Keith Donegan of Code-Sucks.com
+	  
+	  E-Mail: Keithdonegan@gmail.com
+	  
+	  You can do whatever you want with these layouts,
+	  but it would be greatly appreciated if you gave a link
+	  back to http://www.code-sucks.com
+	  
+*/
+
+* { padding: 0; margin: 0; }
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 13px;
+ background-image: url(future.jpg);
+}
+#wrapper { 
+ margin: 0 auto;
+ width: 922px;
+}
+#header {
+ color: #ff6633;
+ width: 900px;
+ float: left;
+ padding: 10px;
+ border: 1px solid #ccc;
+ height: 100px;
+ margin: 10px 0px 0px 0px;
+ background: #ff6633;
+}
+#leftcolumn { 
+ color: #333;
+ border: 1px solid #ccc;
+ background: #00ccff;
+ margin: 0px 0px 0px 0px;
+ padding: 10px;
+ height: 375px;
+ width: 200px;
+ float: left;
+}
+#content { 
+ float: left;
+ color: #333;
+ border: 1px solid #ccc;
+ background: #ffffff;
+ margin: 0px 0px 0px 0px;
+ padding: 10px;
+ height: 375px;
+ width: 456px;
+ display: inline;
+}
+#rightcolumn { 
+ color: #333;
+ border: 1px solid #ccc;
+ background: #00ccff;
+ margin: 0px 0px 0px 0px;
+ padding: 10px;
+ height: 375px;
+ width: 200px;
+ float: left;
+}
+#footer { 
+ width: 900px;
+ clear: both;
+ color: #333;
+ border: 1px solid #ccc;
+ background: #ff6633;
+ margin: 0px 0px 10px 0px;
+ padding: 10px;
+
+hr{
+margin:50px 0;
+color:#eee;
+}
+
+ul li.active{ /*IE6 hack- hide gooey effect from that browser*/
+_visibility: hidden; /*IE6 rule*/
+}
+
+/* ######### Gel Menu CSS ######### */
+
+ul.gelbuttonmenu{
+position:relative;
+padding: 0;
+margin: 0;
+margin-bottom:1em;
+text-align: center; //set value to "left", "center", or "right"*/
+}
+
+ul.gelbuttonmenu li{
+display: inline;
+}
+
+ul.gelbuttonmenu li a{
+color: black;
+font-weight:bold;
+padding: 10px; /*make sure padding is sufficient that the height of the link is enough to fully show the gel button*/
+margin-right: 20px; /*spacing between each menu link*/
+text-decoration: none;
+}
+
+ul.gelbuttonmenu li.active{ /*style of LI that gets dynamically added to menu to create background effect*/
+position:absolute;
+width:0;
+background:lightblue;
+background:url(gelbuttonleft.gif) top left no-repeat, url(gelbuttonright.gif) top right no-repeat, url(gelbuttoncenter.gif) top center repeat-x;
+}
+
+
+
+}
+

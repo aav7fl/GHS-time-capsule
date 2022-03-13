@@ -1,0 +1,141 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Happiness, Freedom, & Quote</title>
+<link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+         <div id="header">
+		 
+		      <center><img alt="page2 (39K)" src="page2.png" height="57" width="757" /></center>		 
+			   
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Left Column -->
+		 <div id="leftcolumn">
+		 
+		       	       <div id="coolmenu">
+<a href="page1.html" onMouseover="showtext('JavaScript tutorials and scripts!')" onMouseout="hidetext()">Movie, Song, & Pop Culture</a>
+<a href="page2.html" onMouseover="showtext('300+ free JavaScripts')" onMouseout="hidetext()">Happiness, Freedom, & Quote</a>
+<a href="page3.html" onMouseover="showtext('Comprehensive JavaScript Reference')" onMouseout="hidetext()">Letter, Technology, & Literature</a>
+<div id="tabledescription"></div>
+</div>
+		 
+		 </div>
+		 <!-- End Left Column -->
+		 
+		 <!-- Begin Right Column -->
+		 <div id="rightcolumn">
+		       
+					 <center><script type="text/javascript">
+
+var ultimateshow=new Array()
+
+//ultimateshow[x]=["path to image", "OPTIONAL link for image", "OPTIONAL link target"]
+
+ultimateshow[0]=['81875-72373.jpg']
+ultimateshow[1]=['Freedom_by_whateverwinnie.jpg']
+ultimateshow[2]=['freedom_nobk.gif']
+ultimateshow[3]=['freedom_s2.jpg']
+ultimateshow[4]=['happy-face1.gif']
+ultimateshow[5]=['images1.jpg']
+ultimateshow[6]=['legalize_freedom_bumper_sticker-p128780816889695514en8ys_400.jpg']
+
+
+//configure the below 3 variables to set the dimension/background color of the slideshow
+
+var slidewidth="250px" //set to width of LARGEST image in your slideshow
+var slideheight="250px" //set to height of LARGEST iamge in your slideshow
+var slidecycles="3" //number of cycles before slideshow stops (ie: "2" or "continous")
+var randomorder="yes" //randomize the order in which images are displayed? "yes" or "no"
+var preloadimages="yes" //preload images? "yes" or "no"
+var slidebgcolor='white'
+
+//configure the below variable to determine the delay between image rotations (in miliseconds)
+var slidedelay=3000
+
+////Do not edit pass this line////////////////
+
+var ie=document.all
+var dom=document.getElementById
+var curcycle=0
+
+if (preloadimages=="yes"){
+for (i=0;i<ultimateshow.length;i++){
+var cacheimage=new Image()
+cacheimage.src=ultimateshow[i][0]
+}
+}
+
+var currentslide=0
+
+function randomize(targetarray){
+ultimateshowCopy=new Array()
+var the_one
+var z=0
+while (z<targetarray.length){
+the_one=Math.floor(Math.random()*targetarray.length)
+if (targetarray[the_one]!="_selected!"){
+ultimateshowCopy[z]=targetarray[the_one]
+targetarray[the_one]="_selected!"
+z++
+}
+}
+}
+
+if (randomorder=="yes")
+randomize(ultimateshow)
+else
+ultimateshowCopy=ultimateshow
+
+function rotateimages(){
+curcycle=(currentslide==0)? curcycle+1 : curcycle
+ultcontainer='<center>'
+if (ultimateshowCopy[currentslide][1]!="")
+ultcontainer+='<a href="'+ultimateshowCopy[currentslide][1]+'" target="'+ultimateshowCopy[currentslide][2]+'">'
+ultcontainer+='<img src="'+ultimateshowCopy[currentslide][0]+'" border="0">'
+if (ultimateshowCopy[currentslide][1]!="")
+ultcontainer+='</a>'
+ultcontainer+='</center>'
+if (ie||dom)
+crossrotateobj.innerHTML=ultcontainer
+if (currentslide==ultimateshow.length-1) currentslide=0
+else currentslide++
+if (curcycle==parseInt(slidecycles) && currentslide==0)
+return
+setTimeout("rotateimages()",slidedelay)
+}
+
+if (ie||dom)
+document.write('<div id="slidedom" style="width:'+slidewidth+';height:'+slideheight+'; background-color:'+slidebgcolor+'"></div>')
+
+function start_slider(){
+crossrotateobj=dom? document.getElementById("slidedom") : document.all.slidedom
+rotateimages()
+}
+
+if (ie||dom)
+window.onload=start_slider
+
+</script></center>
+					 
+	          My definition of Happiness is the emotion you get when you are having great times with your family, friends, and/or that special someone that can make you laugh and smile. My definition of Freedom is being able to do whatever you want with anyone you want whenever you want because you are free to do so. A significant quote that I like comes from the movie Blood Diamond said by Danny Archer
+						<i>"Sometimes I wonder... will God ever forgive us for what we've done to each other? Then I look around and I realize... God left this place a long time ago."</i>
+					  
+						
+		 <!-- End Right Column -->
+		 
+   </div>
+   <!-- End Wrapper -->
+   
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Time Capsule</title>
+<link rel="stylesheet" type="text/css" href="tc.css" />
+<style type="text/css">
+
+/*set CSS for SPAN tag surrounding each image*/
+.seqslidestyle{
+margin-right: 15px;
+}
+</style>
+
+</head>
+
+<body>
+
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+
+         <div id="header">
+		<center> 
+		  <img alt="From 2012!" src="tcbanner.png" height="117" width="692" />	 
+			   </center>
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Navigation -->
+         <div id="navigation">
+		 <div class="topbar"></div>
+<ul class="claybricks">
+<li><a href="tc1.html">Letter</a></li>
+<li><a href="tc1.html">Happiness</a></li>
+<li><a href="tc1.html">Freedom</a></li>
+<li><a href="tc2.html">Pop Culture Items</a></li>
+<li><a href="tc2.html">Tech Prediction</a></li>
+<li><a href="tc2.html">Quote</a></li>
+<li><a href="tc3.html">Movie</a></li>
+<li><a href="tc3.html">Literature</a></li>
+<li><a href="tc3.html">Song</a></li>
+
+</ul> 
+			   
+		 </div>
+		 <!-- End Navigation -->
+		 
+		 <!-- Begin Left Column -->
+
+		 <div id="leftcolumn">
+		 <h2>Five Current Pop Culture Items</h2>
+		 <center>
+		 <br>
+		 <ol>
+		 <li>Facebook
+		 <li>iPhone
+		 <li>Youtube
+		 <li>The Hunger Games
+		 <li>The Big Bang Theory
+		 </ul>
+		 <br>
+		 <br>
+		 <script type="text/javascript">
+
+/***********************************************
+* MultiFrame Image Slideshow script- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var seqslides=new Array()
+//Set Path to Image plus optional URL ("" for no URL):
+seqslides[0]=["tcjava1.jpg", ""]
+seqslides[1]=["tcjava2.jpg", ""]
+seqslides[2]=["tcjava3.jpg", ""]
+seqslides[3]=["tcjava4.jpg", ""]
+seqslides[4]=["bigbang2.jpg", ""]
+
+//Set pause between each image display (2000=2 second):
+var slidedelay=1500
+
+//Set how many images to show at once (must be less than total # of images above):
+var slidestoreveal=1
+
+//Specify code to insert between each slide (ie: "<br>" to insert a line break and create a vertical layout)
+//"" for none (or horizontal):
+var slideseparater="<br>"
+
+//Set optional link target to be added to all images with a link:
+var optlinktarget="secwindow"
+
+//Set image border width:
+var imgborderwidth=5
+
+//Set opacity value of each image when it's "dimmed", and when it's not, respectively (1=100% opaque/normal).
+//Change 0.2 to 0 to completely hide image when it's dimmed:
+var opacityvalues=[0.2,1]
+
+///No need to edit beyond here///////////
+
+function processimgcode(theimg){
+var imghtml=""
+if (theimg[1]!="")
+imghtml='<a href="'+theimg[1]+'" target="'+optlinktarget+'">'
+imghtml+='<img src="'+theimg[0]+'" border="'+imgborderwidth+'" style="filter:alpha(opacity='+(opacityvalues[0]*100)+');-moz-opacity:'+opacityvalues[0]+'">'
+if (theimg[1]!="")
+imghtml+='</a>'
+return imghtml
+}
+
+var curslide=1 //var to track current slide (total: slidestoreveal)
+var curimgindex=0 //var to track current image (total: seqslides.length)
+var isfirstcycle=1 //boolean to indicate whether this is the first cycle
+
+if (document.getElementById){
+for (i=0;i<slidestoreveal;i++)
+document.write('<span id="seqslide'+i+'" class="seqslidestyle">'+processimgcode(seqslides[i])+'</span>'+slideseparater)
+curimgindex=slidestoreveal
+illuminateslide(0,opacityvalues[1])
+}
+
+function illuminateslide(slideindex, amt){
+var slideobj=document.getElementById("seqslide"+slideindex).getElementsByTagName("IMG")[0]
+if (slideobj.filters)
+slideobj.filters.alpha.opacity=amt*100
+else if (slideobj.style.MozOpacity)
+slideobj.style.MozOpacity=amt
+}
+
+function displayit(){
+if (curslide<slidestoreveal){
+if (!isfirstcycle)
+changeimage(curslide)
+illuminateslide(curslide, opacityvalues[1])
+curslide++
+}
+else{
+isfirstcycle=0
+for (i=0;i<slidestoreveal;i++)
+illuminateslide(i, opacityvalues[0])
+changeimage(0)
+illuminateslide(0, opacityvalues[1])
+curslide=1
+}
+}
+
+function changeimage(slideindex){
+document.getElementById("seqslide"+slideindex).innerHTML=processimgcode(seqslides[curimgindex])
+curimgindex++
+if (curimgindex>=seqslides.length)
+curimgindex=0
+}
+
+if (document.getElementById)
+setInterval("displayit()",slidedelay)
+
+
+</script>
+
+		 </div>
+		 <!-- End Left Column -->
+		 
+		 <!-- Begin Content Column -->
+		 <div id="centercolumn">
+		       
+	           <h2>Technology in 10 Years</h2> <br>
+					Personal technology will be necessary for all. Government records, ID's, and shopping will move towards integrating people's personal computers as a necessary part of day-to-day life. Public internet access will be available for all across the United States, and in many locations across the globe. Smart phones will be replaced by either glasses or contacts that display information directly to one's eyes, and the interface is easily interacted with by waving hands in the air, using voice commands, or thinking.
+	 </div>
+		 <!-- End Content Column -->
+
+		 
+		 <!-- Begin Right Column -->
+		 <div id="rightcolumn">
+		 
+		       <h2>Quotes</h2><br>
+					 <ul>
+<img src="einstein.jpg" style="float:left; border: 5px #e19576 solid;" width= "75" > "Only two things are infinite, the universe and human stupidity, and I'm not sure about the former." - Albert Einstein 
+<br><img src="tcdwight.jpg" style="float:right; border: 5px #e19576 solid;" width= "80" >"Before I do anything I ask myself, 'Would an idiot do that?', and if the answer is yes, I do not do that thing."  - Dwight Schrute
+<br><img src="tckeynes.jpg" style="float:left; border: 5px #e19576 solid;" width= "70" ><br>"In the long run we are all dead." - John Maynard Keynes		 
+		 </div>
+		 <!-- End Right Column -->
+		 
+		 <!-- Begin Footer -->
+		 <div id="footer">
+		       
+			   <center>
+			    <a href="http://www.ghsdawgs.com">GHSDawgs.com</a>
+			    
+	     </div>
+		 <!-- End Footer -->
+
+		 
+   </div>
+   <!-- End Wrapper -->
+   
+</body>
+</html>

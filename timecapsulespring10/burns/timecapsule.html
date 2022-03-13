@@ -1,0 +1,138 @@
+<!--Force IE6 into quirks mode with this comment tag-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Erika's 2010 Time Capsule</title>
+<style type="text/css">
+
+body{
+margin: 0;
+padding: 0;
+border: 0;
+overflow: hidden;
+height: 100%; 
+max-height: 100%; 
+}
+
+#framecontentLeft, #framecontentTop{
+position: absolute; 
+top: 0; 
+left: 0; 
+width: 200px; /*Width of left frame div*/
+height: 100%;
+overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+background-color: navy;
+color: white;
+}
+
+#framecontentTop{ 
+left: 200px; /*Set left value to WidthOfLeftFrameDiv*/
+right: 0;
+width: auto;
+height: 120px; /*Height of top frame div*/
+overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+background-color: navy;
+color: white;
+}
+
+#maincontent{
+position: fixed; 
+left: 200px; /*Set left value to WidthOfLeftFrameDiv*/
+top: 120px; /*Set top value to HeightOfTopFrameDiv*/
+right: 0;
+bottom: 0;
+overflow: auto; 
+background: black;
+color: white;
+}
+
+.innertube{
+margin: 15px; /*Margins for inner DIV inside each DIV (to provide padding)*/
+}
+
+* html body{ /*IE6 hack*/
+padding: 120px 0 0 200px; /*Set value to (HeightOfTopFrameDiv 0 0 WidthOfLeftFrameDiv)*/
+}
+
+* html #maincontent{ /*IE6 hack*/
+height: 100%; 
+width: 100%; 
+}
+
+* html #framecontentTop{ /*IE6 hack*/
+width: 100%;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+<div id="framecontentLeft">
+<div class="innertube">
+<img src="erika.jpg">
+<p>
+<p>
+<b>
+1. Lily My Kitty!
+<br>
+2. My Car
+<br>
+3. Ipod Touch
+<br>
+4. Chanel
+<br>
+5. Coach
+<br>
+6. Hello Kitty
+<br>
+7. Finding Nemo
+<br>
+8. My Dream Cake
+<br>
+9.My Dream Truck
+<br>
+10. Where I worked
+
+
+
+</div>
+</div>
+
+<div id="framecontentTop">
+<div class="innertube">
+
+<img src="logo.jpg">
+
+
+
+</div>
+</div>
+
+
+<div id="maincontent">
+<div class="innertube">
+
+1. <img src="lily.jpg"> 2. <img src="car.jpg">
+<br>
+3. <img src="ipod touch.jpg"> 4.   <img src="chanel russian doll.jpg">
+<br>
+5. <img src="coachbag.jpg"> 6. <img src="hellokitty.png">
+<br>
+7. <img src="findingnemo.jpg"> 8.<img src="weddingcake.jpg">
+<br>
+9. <img src="dreamtruck.jpg"> 10. <img src="michaels.jpg">
+
+<p>
+
+</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+/*
+      Created by Keith Donegan of Code-Sucks.com
+	  
+	  E-Mail: Keithdonegan@gmail.com
+	  
+	  You can do whatever you want with these layouts,
+	  but it would be greatly appreciated if you gave a link
+	  back to http://www.code-sucks.com
+	  
+*/
+
+* { padding: 0; margin: 0; }
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 13px;
+}
+#wrapper { 
+ margin: 0 auto;
+ width: 922px;
+}
+#header {
+ color: #333;
+ width: 900px;
+ float: left;
+ padding: 10px;
+ border: 1px solid #ccc;
+ height: 100px;
+ margin: 10px 0px 5px 0px;
+ background: #BD9C8C;
+}
+#leftcolumn { 
+ color: #333;
+ border: 1px solid #ccc;
+ background: #E7DBD5;
+ margin: 0px 5px 5px 0px;
+ padding: 10px;
+ height: 450px;
+ width: 195px;
+ float: left;
+}
+#content { 
+ float: left;
+ color: #333;
+ border: 1px solid #ccc;
+ background: #F2F2E6;
+ margin: 0px 5px 5px 0px;
+ padding: 10px;
+ height: 450px;
+ width: 456px;
+ display: inline;
+}
+#rightcolumn { 
+ color: #333;
+ border: 1px solid #ccc;
+ background: #E7DBD5;
+ margin: 0px 0px 5px 0px;
+ padding: 10px;
+ height: 450px;
+ width: 195px;
+ float: left;
+}
+#footer { 
+ width: 900px;
+ clear: both;
+ color: #333;
+ border: 1px solid #ccc;
+ background: #BD9C8C;
+ margin: 0px 0px 10px 0px;
+ padding: 10px;
+}
+
+
+#thicktabs{
+margin: 0;
+padding: 0;
+float: left;
+font: bold 13px Tahoma;
+}
+
+#thicktabs li{
+display: inline;
+}
+
+#thicktabs li a{
+float: left;
+color: black;
+padding: 8px 11px; /*padding of tabs*/
+text-decoration: none;
+background: transparent url(pinkbg.gif) top right no-repeat;
+border-top: 1px solid #d3bdbe; /*top border style*/
+border-bottom: 3px solid #ffa1a3; /*thick bottom border below tabs*/
+}
+
+#thicktabs li a#leftmostitem{ /*Extra CSS for left most menu item*/
+border-left: 1px solid #d3bdbe; /*left border style*/
+}
+
+#thicktabs li a#rightmostitem{ /*Extra CSS for right most menu item*/
+border-right: 1px solid #d3bdbe; /*right border style*/
+background-position: top left; /*Position background image to the left instead of default right, to hide indented underline for this link*/
+}
+
+#thicktabs li a:visited{
+color: black;
+}
+
+#thicktabs li a:hover{
+color: black;
+background-image: url(pinkbgover.gif); /*background image swap on hover*/
+}
+
+li {list-style-position: inside;}
+
+

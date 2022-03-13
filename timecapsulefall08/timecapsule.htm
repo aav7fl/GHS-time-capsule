@@ -1,0 +1,175 @@
+<!--Force IE6 into quirks mode with this comment tag-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>GHS Web Design Time Capsules</title>
+<style type="text/css">
+#button {
+width: 130px;
+border-right: 1px solid #000;
+padding: 0 0 1em 0;
+margin-bottom: 1em;
+font-family: 'Trebuchet MS', 'Lucida Grande', Arial, sans-serif;
+font-size: 90%;
+background-color: #90bade;
+color: #333;
+}
+
+#button ul {
+list-style: none;
+margin: 0;
+padding: 0;
+border: none;
+}
+
+#button li {
+border-bottom: 1px solid #90bade;
+margin: 0;
+}
+
+#button li a {
+display: block;
+padding: 5px 5px 5px 0.5em;
+border-left: 10px solid #1958b7;
+border-right: 10px solid #508fc4;
+background-color: #2175bc;
+color: #fff;
+text-decoration: none;
+width: 100%;
+}
+
+html>body #button li a {
+width: auto;
+}
+
+#button li a:hover {
+border-left: 10px solid #1c64d1;
+border-right: 10px solid #5ba3e0;
+background-color: #2586d7;
+color: #fff;
+}
+body{
+margin: 0;
+padding: 0;
+border: 0;
+overflow: hidden;
+height: 100%; 
+max-height: 100%; 
+}
+
+#framecontentLeft, #framecontentRight{
+position: absolute; 
+top: 0; 
+left: 0; 
+width: 200px; /*Width of left frame div*/
+height: 100%;
+overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+background-color: navy;
+color: white;
+}
+
+#framecontentRight{
+left: auto;
+right: 0; 
+width: 150px; /*Width of right frame div*/
+overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+background-color: navy;
+color: white;
+}
+
+#maincontent{
+position: fixed; 
+top: 0;
+left: 200px; /*Set left value to WidthOfLeftFrameDiv*/
+right: 150px; /*Set right value to WidthOfRightFrameDiv*/
+bottom: 0;
+overflow: auto; 
+background: #fff;
+}
+
+.innertube{
+margin: 15px; /*Margins for inner DIV inside each DIV (to provide padding)*/
+}
+
+* html body{ /*IE6 hack*/
+padding: 0 150px 0 200px; /*Set value to (0 WidthOfRightFrameDiv 0 WidthOfLeftFrameDiv)*/
+}
+
+* html #maincontent{ /*IE6 hack*/
+height: 100%; 
+width: 100%; 
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+<div id="framecontentLeft">
+<div class="innertube">
+
+<h1>GHS Web Design</h1>
+<h3>Time Capsules</h3>
+<img src="/timecapsule08/blackdawg.jpg" alt="go dawgs">
+
+</div>
+</div>
+
+<div id="framecontentRight">
+<div class="innertube">
+<div id="button">
+<p><strong>Classes:</strong>
+<ul>
+<li><a href="/timecapsule08/fall08capsule.htm">Fall 2008</a></li>
+<li><a href="/timecapsulespring10/timecapsuleswinter2010.html">Winter 2009</a></li>
+<li><a href="/timecapsulefall09/fall09capsule.htm">Fall 2009</a></li>
+<li><a href="/timecapsulespring10/timecapsuleswinter2010.html">Winter 2010</a></li>
+<li><a href="#">Fall 2010</a></li>
+<li><a href="#">Winter 2011</a></li>
+<li><a href="#">Fall 2011</a></li>
+</ul>
+</div>
+
+
+
+</div>
+</div>
+
+
+<div id="maincontent">
+<div class="innertube">
+
+<p><strong><p>Create a web-based "time capsule".  It can be just a snapshot
+of the year, or can encompass everything from K to now. It's up to you <br />
+ 
+
+  
+
+Try to remember and think of things that you did during the year(s).  
+<br />
+Give examples of movies, TV, toys, vacations, school activities, etc.<br />
+  
+An important component might be a personal writing about your thoughts now on some topic.
+
+<blockquote><b>"The point, as with all time capsules, is to illustrate life in 2008, 2009, or whatever."</b></blockquote>
+
+<p>After grading, these time capsules will be sealed and not opened until 10 yrs from now.  
+There will be a link to it, but the link will open to a vault page which will have a countdown 
+timer on it to opening day.</p>
+
+
+
+<p style="text-align: center"><p>See Ya in a Decade!</p>
+<p><p><center><img src="/timecapsule08/vault3.jpg" alt="vault"></center> </p>
+
+</div>
+</div>
+
+
+</body>
+</html>

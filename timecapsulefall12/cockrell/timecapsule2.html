@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Fixed Width CSS Layouts - 3 Column - fw-41-3-col</title>
+
+<style type="text/css">
+<!-- 
+ 
+
+*/
+
+* { padding: 0; margin: 0; }
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 16px;
+ background-color: #ff99cc;
+}
+#wrapper { 
+ margin: 0 auto;
+ width: 922px;
+}
+#header {
+ color: #333;
+ width: 900px;
+ float: left;
+ padding: 10px;
+ border: 1px solid #ccc;
+ height: 100px;
+ margin: 10px 0px 5px 0px;
+ background: #ffff33;
+}
+#leftcolumn { 
+ color: #333;
+ border: 1px solid #ccc;
+ background: #00ffff;
+ margin: 0px 5px 5px 0px;
+ padding: 10px;
+ height: 350px;
+ width: 195px;
+ float: left;
+}
+#content { 
+ float: left;
+ color: #333;
+ border: 1px solid #ccc;
+ background: #9999ff;
+ margin: 0px 5px 5px 0px;
+ padding: 10px;
+ height: 350px;
+ width: 456px;
+ display: inline;
+}
+#rightcolumn { 
+ color: #333;
+ border: 1px solid #ccc;
+ background: #ff6600;
+ margin: 0px 0px 5px 0px;
+ padding: 10px;
+ height: 350px;
+ width: 195px;
+ float: left;
+ position: relative;
+}
+}
+
+.glossymenu{
+list-style-type: none;
+margin: 5px 0;
+padding: 0;
+width: 170px;
+border: 1px solid #9A9A9A;
+border-bottom-width: 0;
+}
+
+.glossymenu li a{
+background: white url(glossyback.gif) repeat-x bottom left;
+font: bold 13px "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, sans-serif;
+color: white;
+display: block;
+width: auto;
+padding: 3px 0;
+padding-left: 10px;
+text-decoration: none;
+
+}
+
+
+* html .glossymenu li a{ /*IE only. Actual menu width minus left padding of A element (10px) */
+width: 160px;
+}
+
+.glossymenu li a:visited, .glossymenu li a:active{
+color: white;
+}
+
+.glossymenu li a:hover{
+background-image: url(glossyback2.gif);
+}
+
+-->
+</style>
+
+
+</head>
+
+<body>
+
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+         <div id="header">
+		 
+		      <center> <img src="pgtwo.png"> </center> 
+			   
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Left Column -->
+		 <div id="leftcolumn">
+		 
+		      <h1> Significant Quote </h1>
+					 The future belongs to those who believe in the beauty of their dreams.
+					 -Eleanor Roosevelt 
+
+					 <br>Take calculated risks. 
+					 That is quite different from being rash.
+					 -George S. Patton</br>
+					 <br>
+					
+			
+		 
+		 </div>
+		 <!-- End Left Column -->
+		 
+		 <!-- Begin Content Column -->
+		 <div id="content">
+		       
+	         <h1> Significant Piece of Literature</h1>
+						  Did you want to see me broken?   
+							Bowed head and lowered eyes?   
+							Shoulders falling down like teardrops,   
+							Weakened by my soulful cries?
+
+							Does my haughtiness offend you?   
+							Don't you take it awful hard
+							’Cause I laugh like I've got gold mines   
+							Diggin’ in my own backyard.
+
+							You may shoot me with your words,   
+							You may cut me with your eyes,
+							You may kill me with your hatefulness,
+							But still, like air, I’ll rise.
+
+							Does my sexiness upset you?
+							Does it come as a surprise
+							That I dance like I've got diamonds   
+							At the meeting of my thighs?
+							-Maya Angelou, “Still I Rise” </div>
+		 <!-- End Content Column -->
+		 
+		 <!-- Begin Right Column -->
+		 <div id="rightcolumn">
+		 
+		       <h1>Significant Song or Lyrics</h1>
+					 Enough of No Love: By Keyisha Cole
+					 <br>
+					 Love: By Musiq Soulchild
+					 <br>
+					 Keep Ya Head Up: By Tupac
+					 <br>
+					 		 <p>
+		<ul class="glossymenu">
+<li><a href="http://ghsdawgs.com/students/emanicockrell/1stcss.html" >Emani's homepage</a></li>
+<li><a href="timecapsule1.html" >Time Capsule 1</a></li>
+<li><a href="timecapsule2.html">Time Capsule 2</a></li>
+<li><a href="timecapsule3.html" style="border-bottom-width: 0">Time Capsule 3</a></li>		
+</ul>
+					 
+		 
+		 </div>
+		 <!-- End Right Column -->
+		 
+   </div>
+   <!-- End Wrapper -->
+   
+</body>
+</html>

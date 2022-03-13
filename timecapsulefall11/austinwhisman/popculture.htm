@@ -1,0 +1,320 @@
+<!--Force IE6 into quirks mode with this comment tag-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Dynamic Drive: CSS Left and Right Frames Layout</title>
+<style type="text/css">
+}
+
+h1 { color:purple;
+}
+
+
+}
+
+h3 { color:#00ffff;
+}
+
+}
+
+h2 { color: purple;
+}
+
+}
+
+h4 { color: red; }
+body{
+margin: 0;
+padding: 0;
+border: 0;
+overflow: hidden;
+height: 100%; 
+max-height: 100%; 
+}
+
+#framecontentLeft, #framecontentRight{
+position: absolute; 
+top: 0; 
+left: 0; 
+width: 200px; /*Width of left frame div*/
+height: 100%;
+overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+background-image: url("side2again.jpg");
+color: white;
+}
+
+#framecontentRight{
+left: auto;
+right: 0; 
+width: 150px; /*Width of right frame div*/
+overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+background-color: #cc9966;
+color: white;
+}
+
+#maincontent{
+position: fixed; 
+top: 0;
+left: 200px; /*Set left value to WidthOfLeftFrameDiv*/
+right: 150px; /*Set right value to WidthOfRightFrameDiv*/
+bottom: 0;
+overflow: auto; 
+background-image: url("skrillex.jpg");
+}
+
+.innertube{
+margin: 15px; /*Margins for inner DIV inside each DIV (to provide padding)*/
+}
+
+* html body{ /*IE6 hack*/
+padding: 0 150px 0 200px; /*Set value to (0 WidthOfRightFrameDiv 0 WidthOfLeftFrameDiv)*/
+}
+
+* html #maincontent{ /*IE6 hack*/
+height: 100%; 
+width: 100%; 
+}
+
+</style>
+
+<script type="text/javascript">
+/*** Temporary text filler function. Remove when deploying template. ***/
+var gibberish=["This is just some filler text", "Welcome to Dynamic Drive CSS Library", "Demo content nothing to read here"]
+function filltext(words){
+for (var i=0; i<words; i++)
+document.write(gibberish[Math.floor(Math.random()*3)]+" ")
+}
+</script>
+
+<script language="JavaScript">
+
+//Preloaded slideshow script- By Jason Moon
+//For this script and more
+//Visit http://www.dynamicdrive.com
+
+// PUT THE URL'S OF YOUR IMAGES INTO THIS ARRAY...
+var Slides = new Array('dead.jpg','swift.jpg', 'sweats.jpg', 'dub.jpg', 'lilwayne.jpg', 'hipster.jpg', 'cod.jpg','halo.jpg','xbox.gif');
+
+// DO NOT EDIT BELOW THIS LINE!
+function CacheImage(ImageSource) { // TURNS THE STRING INTO AN IMAGE OBJECT
+   var ImageObject = new Image();
+   ImageObject.src = ImageSource;
+   return ImageObject;
+}
+
+function ShowSlide(Direction) {
+   if (SlideReady) {
+      NextSlide = CurrentSlide + Direction;
+      // THIS WILL DISABLE THE BUTTONS (IE-ONLY)
+      document.SlideShow.Previous.disabled = (NextSlide == 0);
+      document.SlideShow.Next.disabled = (NextSlide == 
+(Slides.length-1));    
+ if ((NextSlide >= 0) && (NextSlide < Slides.length)) {
+            document.images['Screen'].src = Slides[NextSlide].src;
+            CurrentSlide = NextSlide++;
+            Message = 'Picture ' + (CurrentSlide+1) + ' of ' + 
+Slides.length;
+            self.defaultStatus = Message;
+            if (Direction == 1) CacheNextSlide();
+      }
+      return true;
+   }
+}
+
+function Download() {
+   if (Slides[NextSlide].complete) {
+      SlideReady = true;
+      self.defaultStatus = Message;
+   }
+   else setTimeout("Download()", 100); // CHECKS DOWNLOAD STATUS EVERY 100 MS
+   return true;
+}
+
+function CacheNextSlide() {
+   if ((NextSlide < Slides.length) && (typeof Slides[NextSlide] == 
+'string'))
+{ // ONLY CACHES THE IMAGES ONCE
+      SlideReady = false;
+      self.defaultStatus = 'Downloading next picture...';
+      Slides[NextSlide] = CacheImage(Slides[NextSlide]);
+      Download();
+   }
+   return true;
+}
+
+function StartSlideShow() {
+   CurrentSlide = -1;
+   Slides[0] = CacheImage(Slides[0]);
+   SlideReady = true;
+   ShowSlide(1);
+}
+</script>
+
+<style type="text/css">
+
+.gradientbuttons ul{
+padding: 3px 0;
+margin-left: 0;
+margin-top: 1px;
+margin-bottom: 0;
+font: bold 13px Verdana;
+list-style-type: none;
+text-align: center; /*set to left, center, or right to align the menu as desired*/
+}
+
+.gradientbuttons li{
+display: inline;
+margin: 0;
+}
+
+.gradientbuttons li a{
+text-decoration: none;
+padding: 5px 7px;
+margin-right: 5px;
+border: 1px solid #778;
+color: white;
+border:1px solid gray;
+background: #3282c2;
+border-radius: 8px; /*w3c border radius*/
+box-shadow: 3px 3px 4px rgba(0,0,0,.5); /* w3c box shadow */
+-moz-border-radius: 8px; /* mozilla border radius */
+-moz-box-shadow: 3px 3px 4px rgba(0,0,0,.5); /* mozilla box shadow */
+background: -moz-linear-gradient(center top, #a4ccec, #72a6d4 25%, #3282c2 45%, #357cbd 85%, #72a6d4); /* mozilla gradient background */
+-webkit-border-radius: 8px; /* webkit border radius */
+-webkit-box-shadow: 3px 3px 4px rgba(0,0,0,.5); /* webkit box shadow */
+background: -webkit-gradient(linear, center top, center bottom, from(#a4ccec), color-stop(25%, #72a6d4), color-stop(45%, #3282c2), color-stop(85%, #357cbd), to(#72a6d4)); /* webkit gradient background */
+}
+
+.gradientbuttons li a:hover{
+color: lightyellow;
+}
+
+.redtheme li a{
+font-size:18px;
+background: darkred;
+background: -moz-linear-gradient(center top, #f5795d, #e55e3f 25%, #d02700 45%, #e55e3f 85%, #f5795d);
+background: -webkit-gradient(linear, center top, center bottom, from(#f5795d), color-stop(25%, #e55e3f), color-stop(45%, #d02700), color-stop(85%, #e55e3f), to(#f5795d)); 
+}
+
+.greentheme li a{
+font-size:12px;
+background: green;
+background: -moz-linear-gradient(center top, #7ad690, #3ec05c 25%, #298a40 45%, #3ec05c 85%, #7ad690);
+background: -webkit-gradient(linear, center top, center bottom, from(#7ad690), color-stop(25%, #3ec05c), color-stop(45%, #298a40), color-stop(85%, #3ec05c), to(#7ad690)); 
+}
+
+.blacktheme li a{
+font-size:16px;
+background: black;
+background: -moz-linear-gradient(center top, #9f9f9f, #686868 25%, #2a2a2a 45%, #686868 85%, #9f9f9f);
+background: -webkit-gradient(linear, center top, center bottom, from(#9f9f9f), color-stop(25%, #686868), color-stop(45%, #2a2a2a), color-stop(85%, #686868), to(#9f9f9f)); 
+}
+
+.orangetheme li a{
+font-size:14px;
+background: #e55e3f;
+background: -moz-linear-gradient(center top, #ecad9a, #e5937c 25%, #cf4c2a 45%, #e5937c 85%, #ecad9a);
+background: -webkit-gradient(linear, center top, center bottom, from(#ecad9a), color-stop(25%, #e5937c), color-stop(45%, #cf4c2a), color-stop(85%, #e5937c), to(#ecad9a)); 
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+<div id="framecontentLeft">
+<div class="innertube">
+
+<h3>Here's a banner for the one of the worlds biggest music festivals which hosted all the top Dubstep artists.
+<img src="forest.jpg" alt=""></h3>
+<h3>Around here the genre is increasing greatly with venues and huge raves being set up around the west michigan area.
+small places from the dirty hippy, all the way to roas park circle in Grand Rapids michigan are beginning to host raves.
+There's also other festivals around here such as Basscamp and Camp out.</h3>
+
+</div>
+</div>
+
+<div id="framecontentRight">
+<div class="innertube">
+
+<h2>Celebrities</h2>
+<h3>Today celebrity gossip is more important to most people then our own countires foriegn policy, and  politcal campaign. T
+his presidential debate the second black man with the most chance of gettign elected was basically shunned
+out over what could be false accusations blaired all over the media. all politics are forgotten. The most talked about celebrities today are Justin Bieber, Taylor Swift, Miley Cyrus, Lindsay Lohan, and the Kardashian sisters.
+</h3>
+</div>
+</div>
+
+
+<div id="maincontent">
+<div class="innertube">
+<center>
+<body onLoad="StartSlideShow()">
+</center></div>
+<center>
+<div class="gradientbuttons">
+<ul>
+<li><a href="lit.htm"> Significant Literature</a></li>
+<li><a href="timecapsule.htm"> Time Capsule</a></li>
+<h3> Music today has changed ALOT since the 90's so I can't imagine what the tunes you're listening to now are like. Music has evolved so much in my time from the old school rap of tupac and Biggie, or the grunge rock of nirvana and alice and chains.
+Today country sounds like pop rock, rock isn't good anymore at all and rap is controlled by meaningless rappers such as Lil Wayne. The new type of music that is making a hit now is called DUBSTEP. Raves are becoming to be the newest and biggest events
+in music culture as opposed to festivals like Ozzfest.<Br>
+<br>
+<center>
+<form name="SlideShow">
+<center>
+<table>
+<tr>
+   <td colspan=2><img name="Screen" width=200 height=150></td>
+</tr>
+<tr>
+   <td><input type="button" name="Previous" 
+value=" << "
+onClick="ShowSlide(-1)"></td>
+   <td align="right"><input type="button" name="Next"
+value=" >> " onClick="ShowSlide(1)"></td>
+</table>
+</form>
+
+<body onLoad="StartSlideShow()">
+</center>
+<h1>STYLE</h1>
+<br>
+<br>
+<center><h2>Popular</h2>
+Today the the more popular style of clothing is kind of a mix between the recent preps, and the 80's nerds and jocks look. Generally the girls wear preppy clothes or sweats.
+ Guys vary from the 80's with the nerd shorts or hoodless sweaters. Preppy clothes is the rest of the "popular" trend
+ <br><br>
+ <h2> hipsters</h2>
+These people are the last of the remaining of the emo's and gothic style really. Not many people dress in all black and try to look scary. Its now more of black shirts and skinnys but with a mix of hippy flaire. 
+</h3></center>
+
+
+<center> <h1> Entertainment</h1>
+
+ <h2> Video Games</h2>
+<h3>Progressivly thoughout the decade of 2000-2010 video games have become a major past time in the homes of kids and even many adults. The system that is in now is the Xbox 360 created by Micrsoft studios where Halo Reach and Call of Duty
+Modern Warfare 3 are the most popular games played. THey're both first person shooters that vary in timeline.</h3>
+
+ <h2> Social Networking</h2>
+<h3>Countless hours can be and are spent by people on social netoworking sites such as facebook. People will create statuses informing the current state of their mood of just what they're up too. Many people take advantage of the broad amount of people
+and will create games that require you too visist and pay attention to it ever so often cleverly so that the views on their adds go up hus making more money.</h3>
+
+
+
+
+
+</center>
+
+</div>
+</div>
+
+
+</body>
+</html>
+
